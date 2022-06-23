@@ -23,7 +23,13 @@ let Zhabka = {
 };
 console.log(Zhabka.name, Zhabka.age, Zhabka.isPupsik);
 console.log(Zhabka['name'], Zhabka['age'], Zhabka['isPupsik']);
+// Tanusha 38 true
 
-
+const svinFamily = ['Tatko', 'Matushia', 'SynSvin'];
+let svinAges = [41, 38, 18];
+console.log(svinFamily[2], svinAges[2]);
+// SynSvin 18
+console.log(svinFamily);
+// 
 
 
