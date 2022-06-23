@@ -9,6 +9,21 @@ console.log(`from ${myYear} is ${myAge}`);
 let myName = 'Serhii';
 const SuperSvin = true;
 const LazySvin = false;
-console.log(myName, typeof(myName), SuperSvin, typeof(SuperSvin))
+console.log(myName, typeof(myName), SuperSvin, typeof(SuperSvin));
+// Serhii string true boolean
+
+let something;
+console.log(something);
+// undefined
+
+let Zhabka = {
+    name: 'Tanusha',
+    age: 38,
+    isPupsik: true
+};
+console.log(Zhabka.name, Zhabka.age, Zhabka.isPupsik);
+console.log(Zhabka['name'], Zhabka['age'], Zhabka['isPupsik']);
+
+
 
 
