@@ -71,5 +71,5 @@ let incra = 10, decra = 10;
 console.log(incra, ++incra, incra); // 10 11 11
 console.log(decra, --decra, decra); // 10 9 9
 
-
+console.log(8%3); // 2
 
