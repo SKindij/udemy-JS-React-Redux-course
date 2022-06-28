@@ -63,7 +63,13 @@ const toyCategory = 'bears';
 // interpolation
 console.log(`https://someurl.com/${toyCategory}/7`);
 
+let incro = 10, decro = 10;
+console.log(incro, incro++, incro); // 10 10 11
+console.log(decro, decro--, decro); // 10 10 9
 
+let incra = 10, decra = 10;
+console.log(incra, ++incra, incra); // 10 11 11
+console.log(decra, --decra, decra); // 10 9 9
 
 
 
