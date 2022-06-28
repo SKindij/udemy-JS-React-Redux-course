@@ -48,3 +48,22 @@ let SvinFather = {
     },
 };
 console.log(SvinFather);
+
+/*
+alert('this is a command for outputting messages');
+const requesto = confirm('here you can ask a question to the user?');
+  console.log(requesto, typeof(requesto)); // true/false 'boolean'
+const answert = prompt('What is your favorite animal?', '');
+  console.log(answert, typeof(answert)); // capibara string or null object 
+
+  const ageQuest = +prompt('How old are you?', '');
+  console.log(ageQuest, typeof(ageQuest)); // 41 'number'
+*/
+const toyCategory = 'bears';
+// interpolation
+console.log(`https://someurl.com/${toyCategory}/7`);
+
+
+
+
+
