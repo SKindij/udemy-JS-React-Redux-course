@@ -131,17 +131,39 @@ console.log(!SvinFather.isPupsik); // => true
 
 // examples with cycles
 let presentYear = 2022;
-while (SvinFather.age <= 45) {
+while (SvinFather.age <= 43) {
   console.log(`in ${presentYear} you are ${SvinFather.age}`);
   SvinFather.age++;
   presentYear++;
 }
 
-for (let workYear = 0; workYear <= 5; workYear++) {
+for (let workYear = 3; workYear <= 7; workYear++) {
   console.log(`in ${presentYear} you work ${workYear} year, and you are ${SvinFather.age}`);
   SvinFather.age++;
   presentYear++;
 }
+console.log(presentYear, SvinFather);
+
+// another examples with cycles
+for (let i = 0; i < 3; i++){
+  console.log(i)
+  for (let j = 10; j < 13; j++){
+    console.log(j)
+  }
+}
+
+// star triangle
+let starTriangle = '';
+const triangleLenth = 7;
+for (let i = 1; i < triangleLenth; i++) {
+  for (let j = 0; j < i; j++) {
+    starTriangle += '*';
+  }
+  starTriangle += '\n';
+}
+console.log(starTriangle);
+
+
 
 
 
