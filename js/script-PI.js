@@ -99,6 +99,23 @@ function setWeather() {
   }
 }
 
+(SvinFather.age === 41) ? console.log('begins a new stage in life') : console.log('you will succeed');
+
+/*
+switch (expression) {
+  case choice1:
+    run this code
+    break;
+
+  case choice2:
+    run this code instead
+    break;
+
+  default:
+    actually, just run this code
+}
+*/
+
 
 
 
