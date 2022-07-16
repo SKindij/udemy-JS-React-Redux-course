@@ -73,3 +73,32 @@ console.log(decra, --decra, decra); // 10 9 9
 
 console.log(8%3); // 2
 
+/*
+if (condition) {
+  code to run if condition is true
+} else {
+  run some other code instead
+}
+*/
+let select = document.querySelector('select');
+let para = document.querySelector('#weatherAdvice');
+  select.addEventListener('change', setWeather);
+
+function setWeather() {
+  let choice = select.value;
+  if (choice === 'sunny') {
+    para.textContent = 'Wear shorts! Go to the beach or park and buy ice cream.';
+  } else if (choice === 'rainy') {
+    para.textContent = 'Take a raincoat and an umbrella, and don\'t stay outside for too long.';
+  } else if (choice === 'snowing') {
+    para.textContent = 'It is best to sit with a cup of hot chocolate or make a snowman.';
+  } else if (choice === 'overcast') {
+    para.textContent = 'The sky is gray and gloomy; it can change at any moment, so take a raincoat just in case.';
+  } else {
+    para.textContent = '';
+  }
+}
+
+
+
+
