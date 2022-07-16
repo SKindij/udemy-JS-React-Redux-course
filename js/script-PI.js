@@ -126,6 +126,22 @@ console.log( NaN || null || !3 || undefined || 5); // => 5
 console.log( NaN || null && !3 && undefined || 5); // => 5
 console.log( 5 === 5 && 3 > 1 || 5); // => true
 
+console.log(SvinFather.isPupsik); // => false
+console.log(!SvinFather.isPupsik); // => true
+
+// examples with cycles
+let presentYear = 2022;
+while (SvinFather.age <= 45) {
+  console.log(`in ${presentYear} you are ${SvinFather.age}`);
+  SvinFather.age++;
+  presentYear++;
+}
+
+for (let workYear = 0; workYear <= 5; workYear++) {
+  console.log(`in ${presentYear} you work ${workYear} year, and you are ${SvinFather.age}`);
+  SvinFather.age++;
+  presentYear++;
+}
 
 
 
