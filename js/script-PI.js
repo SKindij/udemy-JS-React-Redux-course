@@ -155,8 +155,11 @@ for (let i = 0; i < 3; i++){
 // star triangle
 let starTriangle = '';
 const triangleLenth = 7;
-for (let i = 1; i < triangleLenth; i++) {
-  for (let j = 0; j < i; j++) {
+for (let i = 0; i < triangleLenth; i++) {
+  for (let j = 0; j < triangleLenth - i; j++) {
+    starTriangle += ' ';
+  }
+  for (let j = 0; j < 2 * i + 1; j++) {
     starTriangle += '*';
   }
   starTriangle += '\n';
@@ -193,11 +196,29 @@ for (let i = 5; i < 11; i++) {
 console.log(arrayOfNumbers);
 
 //course tasks middle
+const arr = [3, 5, 8, 16, 20, 23, 50];
+const result1 = [];
+  for (let m = 0; m < arr.length; m++) {
+    result1[m] = arr[m];
+  }
+console.log(result1);
 
+const data2 = [5, 10, 'Shopping', 20, 'Homework'];
+  for (let m = 0; m < data2.length; m++) {
+    if (typeof(data2[m]) === 'number') {
+      data2[m] = data2[m]* 2;
+    } else if (typeof(data2[m]) === 'string') {
+      data2[m] = `${data2[m]} - done`;
+    }
+  }
+console.log(data2);
 
-
-
-
+const data3 = [5, 10, 'Shopping', 20, 'Homework'];
+const result3 = [];
+for (let r = 1; r <= data3.length; r++) {
+  result3[r - 1] = data3[data3.length - r]
+}
+console.log(result3);
 
 
 
