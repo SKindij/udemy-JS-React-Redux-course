@@ -220,5 +220,21 @@ for (let r = 1; r <= data3.length; r++) {
 }
 console.log(result3);
 
+// arrow functions
+console.log('functions arrow functions arrow functions')
+const simpleCalc = (ax, bx) => ax + bx;
+console.log(simpleCalc(17, 24));
+
+function convert(amount, curs) {
+  console.log(amount * curs);
+}
+const usdCurs = 28;
+const eurCurs = 32;
+convert(500, usdCurs);
+convert(500, eurCurs);
+
+
+
+
 
 
