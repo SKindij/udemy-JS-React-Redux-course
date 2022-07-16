@@ -163,6 +163,39 @@ for (let i = 1; i < triangleLenth; i++) {
 }
 console.log(starTriangle);
 
+//course tasks junior
+for (let k = 5; k <= 10; k++) {
+  console.log(k);
+}
+
+for (let k = 20; k >= 10; k--) {
+  if (k === 13) break;
+  console.log(k);
+}
+
+for (let k = 2; k <= 10; k++) {
+  if (k % 2 !== 0) continue;
+  console.log(k);
+}
+
+let iNum = 2;
+while (iNum <=16) {
+  if (iNum % 2 !== 0) {
+     console.log(iNum);
+ }
+ iNum++;
+}
+
+const arrayOfNumbers = [];
+for (let i = 5; i < 11; i++) {
+  arrayOfNumbers[i - 5] = i;
+}
+console.log(arrayOfNumbers);
+
+//course tasks middle
+
+
+
 
 
 
