@@ -414,11 +414,21 @@ for (let key in testOptions) {
   }
 }
 console.log(keyCounter);  // => 5
+console.log(Object.keys(testOptions).length);  // => 4
 
-
-
+testOptions['makeTest'] = function() {
+  console.log('inside test');
+}
+console.log(testOptions); // => {name: 'test', width: 1024, height: 924, colors: {…}, makeTest: ƒ}
+console.log(testOptions.makeTest()); // => inside test
 
 // Destructuring allows you to break an object or array into variables upon assignment.
-console.log('Destructuring an object or array');
+console.log('Destructuring an object');
+  const {border, bg} = testOptions['colors'];
+console.log(border, bg); // => black red
+
+
+
+
 
 
