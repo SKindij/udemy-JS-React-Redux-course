@@ -278,7 +278,37 @@ console.log(testString);
 console.log(Math.round(testNumber)); // => 17
 console.log(parseInt(testNumStr)); // => 10
 console.log(parseFloat(testNumStr)); // => 10.5
-console.log(); // =>
+
+//course tasks middle
+function calculateVolumeAndArea(length) {
+  if (typeof(length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+      return "An error occurred while calculating";
+  }
+  let volume = 0,
+      area = 0; 
+  volume = length * length * length;
+  area = 6 * (length * length);
+  return `Cube volume: ${volume}, total surface area: ${area}`;
+}
+console.log(calculateVolumeAndArea(5));  // => Cube volume: 125, total surface area: 150
+console.log(calculateVolumeAndArea('7'));  // => An error occurred while calculating
+
+function getCoupeNumber(seatNumber) {
+  if (typeof(seatNumber) !== 'number' || seatNumber < 0 || !Number.isInteger(seatNumber)) {
+      return "Error. Check if the seat number entered is correct";
+  }
+  if (seatNumber === 0 || seatNumber > 36) {
+      return "There are no such places in the car";
+  }
+  for (let i = 4; i <= 36; i = i + 4) {
+      if (seatNumber <= i) {
+          return Math.ceil(i / 4);
+      }
+  }
+}
+console.log(getCoupeNumber(33));  // => 9
+console.log(getCoupeNumber(17));  // => 5
+console.log(getCoupeNumber('Bib'));  // => Error. Check if the seat number entered is correct
 
 
 
