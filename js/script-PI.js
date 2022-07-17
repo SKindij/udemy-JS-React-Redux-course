@@ -233,6 +233,19 @@ const eurCurs = 32;
 convert(500, usdCurs);
 convert(500, eurCurs);
 
+//course tasks junior
+function sayHello(name) {
+  return `Hello, ${name}!`;
+}
+console.log(sayHello('Maxin'));
+
+function returnNeighboringNumbers(num) {
+  return [num - 1, num, num + 1];
+}
+console.log(returnNeighboringNumbers(17));
+
+
+
 
 
 
