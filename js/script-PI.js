@@ -273,10 +273,12 @@ console.log(testString.substring(5, 10)); // => fruit
 console.log(testString.substr(5, 5)); // => fruit
 console.log(testString);
 
-
-
-
-
+  const testNumber = 17.30;
+  const testNumStr = '10.5px';
+console.log(Math.round(testNumber)); // => 17
+console.log(parseInt(testNumStr)); // => 10
+console.log(parseFloat(testNumStr)); // => 10.5
+console.log(); // =>
 
 
 
