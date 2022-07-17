@@ -310,5 +310,49 @@ console.log(getCoupeNumber(33));  // => 9
 console.log(getCoupeNumber(17));  // => 5
 console.log(getCoupeNumber('Bib'));  // => Error. Check if the seat number entered is correct
 
+// course tasks senior
+function getTimeFromMinutes(minutesTotal) {
+  if (typeof(minutesTotal) !== 'number' || minutesTotal < 0 || !Number.isInteger(minutesTotal)) { //The value to test for integer.
+      return "Error, check data";
+  }
+  const hours = Math.floor(minutesTotal / 60);
+  const minutes = minutesTotal % 60;
+  let hoursStr = '';
+  switch (hours) {
+      case 0: 
+          hoursStr = 'hours';
+          break;
+      case 1:
+          hoursStr = 'hour';
+          break;
+      case 2:
+      case 3:
+      case 4:
+          hoursStr = 'hours';
+          break;
+      default:
+          hoursStr = 'hours';
+  }
+  return `This is ${hours} ${hoursStr} и ${minutes} minit`;
+}
+console.log(getTimeFromMinutes(160));  // => This is 2 hours и 40 minit
+console.log(getTimeFromMinutes(110));  // => This is 1 hour и 50 minit
+
+function findMaxNumber(a, b ,c, d) {
+  if (typeof(a) !== 'number' ||
+      typeof(b) !== 'number' ||
+      typeof(c) !== 'number' ||
+      typeof(d) !== 'number') {
+      return 0;
+  } else {
+      return Math.max(a, b ,c, d);
+  }
+}
+console.log(findMaxNumber(1, 5, 6.6, 10.5));  // => 10.5
+console.log(findMaxNumber(1, 5, '6', '10'));  // => 0
+
+
+
+
 
 
