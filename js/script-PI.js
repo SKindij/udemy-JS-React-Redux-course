@@ -385,9 +385,40 @@ learnJS('Java Script', function(){
   console.log('It is interesting!');
 });
 
+// iterating over object properties
+const testOptions = {
+  name: 'test',
+  width: 1024,
+  height: 924,
+  superfluous: 'not needed',
+  colors: {
+    border: 'black',
+    bg: 'red'
+  }
+};
+console.log(testOptions.height);  // => 924
+console.log(testOptions['colors']);  // => {border: 'black', bg: 'red'}
+  delete testOptions.superfluous;
+console.log(testOptions);  // => {name: 'test', width: 1024, height: 924, colors: {…}}  
+
+let keyCounter = 0;
+for (let key in testOptions) {
+  if (typeof(testOptions[key]) === 'object') {
+    for (let ink in testOptions[key]) {
+      console.log(`Property ${ink} equal ${testOptions[key][ink]}`);
+      keyCounter++;
+    }
+  } else {
+    console.log(`Property ${key} equal ${testOptions[key]}`);
+    keyCounter++;
+  }
+}
+console.log(keyCounter);  // => 5
 
 
 
 
+// Destructuring allows you to break an object or array into variables upon assignment.
+console.log('Destructuring an object or array');
 
 
