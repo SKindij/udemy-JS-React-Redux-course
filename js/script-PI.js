@@ -376,6 +376,15 @@ console.log(fib(7));  // => 0 1 1 2 3 5 8
 // method removes whitespace characters from the beginning and end of a string.
 console.log('String.prototype.trim()');
 
+// This writing is called asynchronous programming using callbacks.
+function learnJS(lang, callback) {
+  console.log(`I learn: ${lang}.`);
+  callback();
+}
+learnJS('Java Script', function(){
+  console.log('It is interesting!');
+});
+
 
 
 
