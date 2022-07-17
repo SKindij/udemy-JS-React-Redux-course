@@ -193,7 +193,7 @@ const arrayOfNumbers = [];
 for (let i = 5; i < 11; i++) {
   arrayOfNumbers[i - 5] = i;
 }
-console.log(arrayOfNumbers);
+console.log(arrayOfNumbers); // => [5, 6, 7, 8, 9, 10]
 
 //course tasks middle
 const arr = [3, 5, 8, 16, 20, 23, 50];
@@ -201,7 +201,7 @@ const result1 = [];
   for (let m = 0; m < arr.length; m++) {
     result1[m] = arr[m];
   }
-console.log(result1);
+console.log(result1); // => [3, 5, 8, 16, 20, 23, 50]
 
 const data2 = [5, 10, 'Shopping', 20, 'Homework'];
   for (let m = 0; m < data2.length; m++) {
@@ -211,38 +211,38 @@ const data2 = [5, 10, 'Shopping', 20, 'Homework'];
       data2[m] = `${data2[m]} - done`;
     }
   }
-console.log(data2);
+console.log(data2); // => [10, 20, 'Shopping - done', 40, 'Homework - done']
 
 const data3 = [5, 10, 'Shopping', 20, 'Homework'];
 const result3 = [];
 for (let r = 1; r <= data3.length; r++) {
   result3[r - 1] = data3[data3.length - r]
 }
-console.log(result3);
+console.log(result3); // => ['Homework', 20, 'Shopping', 10, 5]
 
 // arrow functions
 console.log('functions arrow functions arrow functions')
 const simpleCalc = (ax, bx) => ax + bx;
-console.log(simpleCalc(17, 24));
+console.log(simpleCalc(17, 24)); // => 41
 
 function convert(amount, curs) {
   console.log(amount * curs);
 }
 const usdCurs = 28;
 const eurCurs = 32;
-convert(500, usdCurs);
-convert(500, eurCurs);
+convert(500, usdCurs); // => 14000
+convert(500, eurCurs); // => 16000
 
 //course tasks junior
 function sayHello(name) {
   return `Hello, ${name}!`;
 }
-console.log(sayHello('Maxin'));
+console.log(sayHello('Maxin')); // => Hello, Maxin!
 
 function returnNeighboringNumbers(num) {
   return [num - 1, num, num + 1];
 }
-console.log(returnNeighboringNumbers(17));
+console.log(returnNeighboringNumbers(17)); // => [16, 17, 18]
 
 function getMathResult(num, times) {
   if (typeof(times) !== 'number' || times <= 0) {
@@ -258,8 +258,21 @@ function getMathResult(num, times) {
   }
   return str;
 }
-console.log(getMathResult(7, 3));
-console.log(getMathResult(10, 4));
+console.log(getMathResult(7, 3)); // => 7---14---21
+console.log(getMathResult(10, 4)); // => 10---20---30---40
+
+// data type properties
+console.dir(Number);
+console.dir(String);
+
+  const testString= 'test fruit string';
+console.log(testString.toUpperCase()); // => TEST FRUIT STRING
+console.log(testString.indexOf('fruit')); // => 5
+console.log(testString.slice(5, 10)); // => fruit
+console.log(testString.substring(5, 10)); // => fruit
+console.log(testString.substr(5, 5)); // => fruit
+console.log(testString);
+
 
 
 
