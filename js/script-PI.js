@@ -452,10 +452,14 @@ console.log(knowledge); // => ['HTML', 'CSS', 'JavaScript', 'SCSS', 'SQL']
 console.log(testoString); // => HTML & CSS & JavaScript & SCSS & SQL
 console.log(knowledge.sort()); // => ['CSS', 'HTML', 'JavaScript', 'SCSS', 'SQL']
 
-
-
-
-
+// some way of sorting
+const testoArray = [11, 7, 24, 3, 46, 28];
+  console.log(testoArray);
+function compareNum (a, b) {
+  return a - b;
+}
+testoArray.sort(compareNum);
+  console.log(testoArray); // => [3, 7, 11, 24, 28, 46]
 
 
 
