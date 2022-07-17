@@ -497,4 +497,21 @@ clonPupsik['fromSvinFamily'] = false;
 console.log(addPupsik); // => {isPupsik: true, fromSvinFamily: true}
 console.log(clonPupsik); // => {isPupsik: true, fromSvinFamily: false}
 
+// simple copying of arrays
+console.log(svinFamily); // => ['Tatko', 'Matushia', 'SynSvin']
+const clonFamily = svinFamily.slice();
+clonFamily[3] = 'Pesyk';
+console.log(clonFamily); // => ['Tatko', 'Matushia', 'SynSvin', 'Pesyk']
+
+// ES6 & ES8 copy methods
+const videoHost = ['NetFlix', 'YouTube', 'Vimeo'];
+const blogsHost = ['wordpress', 'LiveJournal', 'blogger'];
+const interHosts = [...videoHost, ...blogsHost, 'FaseBook'];
+console.log(interHosts) // => ['NetFlix', 'YouTube', 'Vimeo', 'wordpress', 'LiveJournal', 'blogger', 'FaseBook']
+
+const newClonFamily = [...svinFamily];
+console.log(newClonFamily) // => ['Tatko', 'Matushia', 'SynSvin']
+
+const newClonPupsik = {...addPupsik};
+console.log(newClonPupsik) // => {isPupsik: true, fromSvinFamily: true}
 
