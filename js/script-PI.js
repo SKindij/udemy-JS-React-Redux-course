@@ -427,6 +427,33 @@ console.log('Destructuring an object');
   const {border, bg} = testOptions['colors'];
 console.log(border, bg); // => black red
 
+// about array methods
+console.dir(Array);
+ const testArray = [1, 2, 3, 6, 8];
+console.log(testArray); // => [1, 2, 3, 6, 8]
+  testArray.pop(); 
+console.log(testArray); // => [1, 2, 3, 6]
+  testArray.push(9, 10);
+console.log(testArray); // => [1, 2, 3, 6, 9, 10]
+// shift & unshift use rarely
+  for (let value of testArray) {
+    console.log(`elem ${value}`);
+  }; // will print the value of each element of the array
+console.log(testArray.length);  // => 6
+
+testArray.forEach(function(item, no, testArray){
+  console.log(`item ${no}: ${item} inside ${testArray}`)
+}); // => ... item 5: 10 inside 1,2,3,6,9,10
+
+  const testStringo = 'HTML, CSS, JavaScript, SCSS, SQL';
+  const knowledge = testStringo.split(', ');
+console.log(knowledge); // => ['HTML', 'CSS', 'JavaScript', 'SCSS', 'SQL']
+  const testoString = knowledge.join(' & ');
+console.log(testoString); // => HTML & CSS & JavaScript & SCSS & SQL
+console.log(knowledge.sort()); // => ['CSS', 'HTML', 'JavaScript', 'SCSS', 'SQL']
+
+
+
 
 
 
