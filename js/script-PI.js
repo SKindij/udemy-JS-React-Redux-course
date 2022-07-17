@@ -361,8 +361,7 @@ function fib(num) {
   let second = 1;
   for (let i = 0; i < num; i++) {
       if (i + 1 === num) {
-        result += `${first}`;
-// Без пробела в конце
+        result += `${first}`; // No space at the end
       } else {
         result += `${first} `;
       }
@@ -372,9 +371,10 @@ function fib(num) {
   }
   return result;
 }
-console.log(fib(7));  // => 0 1 1 2 3
+console.log(fib(7));  // => 0 1 1 2 3 5 8
 
-
+// method removes whitespace characters from the beginning and end of a string.
+console.log('String.prototype.trim()');
 
 
 
