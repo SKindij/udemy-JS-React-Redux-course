@@ -461,5 +461,40 @@ function compareNum (a, b) {
 testoArray.sort(compareNum);
   console.log(testoArray); // => [3, 7, 11, 24, 28, 46]
 
+// simple copying of objects
+console.log(Zhabka); // => {name: 'Tanusha', age: 38, isPupsik: true, height: 175, from: 'Pryluki'}
+  function copyObject(mainObj) {
+    let objCopy = {};
+    let key;
+      for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+      }
+      return objCopy;
+  }
+const clonZhabka = copyObject(Zhabka);
+clonZhabka['age'] = 1;
+clonZhabka['from'] = 'California';
+console.log(clonZhabka); // => {name: 'Tanusha', age: 1, isPupsik: true, height: 175, from: 'California'}
+
+console.log(SvinFather); // => {name: 'Serhii', age: 49, isPupsik: false, frontEnd: {…}}
+
+const SvinSon = {
+  name: 'Max',
+  age: 18
+};
+console.log(SvinSon);  // => {name: 'Max', age: 18}
+const addPupsik = {
+  isPupsik: true,
+  fromSvinFamily: true
+};
+console.log(addPupsik); // => {isPupsik: true, fromSvinFamily: true}
+Object.assign(SvinSon, addPupsik); 
+console.log(SvinSon); // => {name: 'Max', age: 18, isPupsik: true, fromSvinFamily: true}
+
+const clonPupsik = Object.assign({}, addPupsik);
+console.log(clonPupsik); // => {isPupsik: true, fromSvinFamily: true}
+clonPupsik['fromSvinFamily'] = false;
+console.log(addPupsik); // => {isPupsik: true, fromSvinFamily: true}
+console.log(clonPupsik); // => {isPupsik: true, fromSvinFamily: false}
 
 
