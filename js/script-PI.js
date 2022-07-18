@@ -611,6 +611,29 @@ function availableCurr(arr, missingCurr) {
 }
 console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY')); // => 
 
+// begin with OOP
+const soldier = {
+  health: 400,
+  armor: 100,
+  weapon: 'rifle'
+}
+const soldierJohn = {
+  health: 210
+}
+// the old way of using prototype properties
+soldierJohn.__proto__ = soldier;
+console.log(soldierJohn); // => {health: 210}
+console.log(soldierJohn.armor); // => 100
+
+// object new prototype
+const soldierRufus = {
+  health: 260
+}
+Object.setPrototypeOf(soldierRufus, soldier);
+console.log(soldierRufus.weapon); // => rifle
+
+const soldierJenifer = Object.create(soldier);
+
 
 
 
