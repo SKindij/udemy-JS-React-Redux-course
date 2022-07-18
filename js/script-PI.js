@@ -574,6 +574,46 @@ function standardizeStrings(arr) {
 }
 console.log(standardizeStrings(favoriteCities));
 
+//course tasks middle
+const someString = 'This is some strange string';
+function reverse(str) {
+    if (typeof(str) !== 'string') {
+        return "Error!";
+    }
+    // The most optimal solution
+    return str.split('').reverse().join('');
+    // Loop solution
+    // let newStr = '';
+    // for (let i = str.length - 1; i >= 0; i--) {
+    //     newStr += str[i];
+    // }
+    // return newStr
+}
+console.log(reverse(someString)); // => gnirts egnarts emos si sihT
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+function availableCurr(arr, missingCurr) {
+    let str = '';
+    arr.length === 0 ? str = 'No currencies available' : str = 'Available currencies:\n';
+    arr.forEach(function(curr, i) {
+        if (curr !== missingCurr) {
+            str += `${curr}\n`;
+        }
+    });
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] === missingCurr) {
+    //         continue;
+    //     }
+    //     str += `${arr[i]}\n`;
+    // }
+    return str;
+}
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY')); // => 
+
+
+
+
 
 
 
