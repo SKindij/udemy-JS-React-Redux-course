@@ -50,13 +50,13 @@ const personalMovieDB = {
       }
   },
   writeYourGenres: function() {
-    for (let j = 1; j < 2; j++) {
+    for (let j = 1; j <= 3; j++) {
         let genre = prompt(`Your favorite genre numbered ${j}`);
         if (genre === '' || genre == null) {
           console.log('You entered incorrect data or did not enter it at all');
-          i--;
+          j--;
         } else {
-          personalMovieDB.genres[i - 1] = genre;
+          personalMovieDB.genres[j - 1] = genre;
         }        
     // Alternative option
         // let genres = prompt(`Enter your favorite genres separated by commas`).toLowerCase();
@@ -74,10 +74,11 @@ const personalMovieDB = {
   }
 };
 
-
-
-
-
+// personalMovieDB.start();
+// personalMovieDB.rememberMyFilms();
+// personalMovieDB.detectPersonalLevel();
+// personalMovieDB.writeYourGenres();
+// personalMovieDB.showMyDB();
 
 
 
