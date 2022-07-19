@@ -672,9 +672,26 @@ function isBudgetEnough(data) {
       return 'Budget is not enough';
   }
 }
-console.log(isBudgetEnough(shoppingMallData)); // => 
+console.log(isBudgetEnough(shoppingMallData)); // => Budget is not enough
 
-
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
+function sortStudentsByGroups(arr) {
+    arr.sort();
+    const a = [], b = [], c = [], rest = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i < 3) {
+            a.push(arr[i]);
+        } else if (i < 6) {
+            b.push(arr[i]);
+        } else if (i < 9) {
+            c.push(arr[i]);
+        } else {
+            rest.push(arr[i]);
+        }
+    }
+    return [a, b, c, `Remaining students: ${rest.length === 0 ? '-' : rest.join(', ')}`]
+}
+console.log(sortStudentsByGroups(students));
 
 
 
