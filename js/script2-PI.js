@@ -30,8 +30,8 @@ allButtons.forEach(btn => {
   btn.addEventListener('click', showInfo, {once: true});
 });
 
-
-
-
+// navigating the DOM tree
+console.log(document.documentElement);
+console.log();
 
 
