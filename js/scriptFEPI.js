@@ -13,14 +13,25 @@ console.log(circles); // => HTMLCollection(3) [div.circle, ...]
 // more modern way
 const hearts = document.querySelectorAll('.heart');
 console.log(hearts); // => NodeList(3) [div.heart, ...]
-hearts.forEach(item => {
-    console.log(item);
-});  // => we get each element from the pseudoarray
-
+for (let i = 0; i < hearts.length; i++) {
+    console.log(hearts[i]);
+}; // we get each element from the pseudoarray
+  
 const firstHeart = document.querySelector('.heart');
 console.log(firstHeart); // => <div class="heart">...</div>
 
+// managing changes to page element styles
+box.style.backgroundColor = '#daa520';
+box.style.width = '500px'; // is added as a priority inline style
 
+buttons[2].style.borderRadius = '100%';
+circles[1].style.backgroundColor = '#0bf9ea';
+
+hearts.forEach(item => {
+    item.style.backgroundColor = '#1b1b1b';
+});  
+
+// we create new page elements
 
 
 
