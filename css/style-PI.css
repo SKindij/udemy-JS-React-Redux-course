@@ -29,6 +29,10 @@ input, button, textarea, select {
   font-weight: 700;
 }
 
+.separator {
+  height: 25px;
+  background-color: lightslategrey;
+}
 /* trainings */
 button {
   width: 150px;
