@@ -709,6 +709,15 @@ const c2 = increment();
 const c3 = increment();
 console.log('example increment', c1, c2, c3) // => example increment 1 2 3
 
+// intervue questions
+console.log('### intervue questions ###')
+let xy = 5; console.log( xy++ );  // => 5
+console.log( [ ] + false - null + true );  // => NaN
+let yy = 1; let xx = yy = 2; console.log( xx );  // => 2
+console.log( [ ] + 1 + 2 );  // => 12
+console.log( null || 2 && 3 || 4 );  // => 3
+
+
 
 
 
