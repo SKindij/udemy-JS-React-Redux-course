@@ -17,6 +17,7 @@ for (let i = 0; i < hearts.length; i++) {
     console.log(hearts[i]);
 }; // we get each element from the pseudoarray
   
+const wrapper = document.querySelector('.wrapper');
 const firstHeart = document.querySelector('.heart');
 console.log(firstHeart); // => <div class="heart">...</div>
 
@@ -32,8 +33,14 @@ hearts.forEach(item => {
 });  
 
 // we create new page elements
-
-
+const divo = document.createElement('div');
+  const text = document.createTextNode('it is rarely used');
+  divo.classList.add('black');
+// box.before(divo);
+// wrapper.prepend(divo);
+wrapper.append(divo);
+box.textContent = 'here is our box';
+divo.innerHTML = '<h2>here new text</h2>';
 
 
 
