@@ -32,6 +32,6 @@ allButtons.forEach(btn => {
 
 // navigating the DOM tree
 console.log(document.documentElement);
-console.log();
+console.log(document.body.childNodes);
 
 
