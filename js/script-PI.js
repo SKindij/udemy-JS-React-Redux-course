@@ -694,6 +694,22 @@ function sortStudentsByGroups(arr) {
 console.log(sortStudentsByGroups(students));
 
 
+// closures
+function createCounter() {
+  let counter = 0;
+  const myInCount = function() {
+    counter = counter + 1;
+    return counter;
+  }
+  return myInCount;
+}
+const increment = createCounter();
+const c1 = increment(); 
+const c2 = increment(); 
+const c3 = increment();
+console.log('example increment', c1, c2, c3) // => example increment 1 2 3
+
+
 
 
 
