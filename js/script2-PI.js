@@ -96,7 +96,7 @@ let students = {
   }
 };
 
-function getTatalProgressByIteration (data) {
+function getTotalProgressByIteration (data) {
   let total = 0;
   let students = 0;
 for (let course of Object.values(data)) {
@@ -116,12 +116,27 @@ for (let course of Object.values(data)) {
 }
   return total / students;
 }
-console.log(getTatalProgressByIteration(students));
+console.log(getTotalProgressByIteration(students));
 
-
-
-
-
+function getTotalProgressByRecursion (data) { 
+    if (Array.isArray(data)) {
+      let total = 0;
+      for (let i = 0; i < data.length; i++) {
+        total += data[i].progress;
+      }
+      return [total, data.length];
+    } else {
+        let total = [0, 0];
+        for (let subData of Object.values(data)) {
+          const subDataArray = getTotalProgressByRecursion (subData);
+          total[0] += subDataArray[0];
+          total[1] += subDataArray[1];
+        }
+        return total;
+    }
+}
+const recursionResult = getTotalProgressByRecursion (students);
+console.log(recursionResult[0] / recursionResult[1]);
 
 
 
