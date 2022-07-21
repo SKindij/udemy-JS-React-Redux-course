@@ -52,7 +52,7 @@ for (let node of document.querySelector('main').childNodes) {
 }
 console.log('*****************************************')
 
-// some words about recersion
+// some words about recursion
 function powA (x, n) {
   let result = 1; 
   for (let k = 1; k <= n; k++) {
