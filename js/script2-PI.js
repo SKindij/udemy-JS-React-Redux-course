@@ -163,7 +163,7 @@ function factorialize(num) {
 }
 console.log(factorialize(5)); // => 120
 
-// palindrome is phrase, which reads same backward or forward
+
 
 
 

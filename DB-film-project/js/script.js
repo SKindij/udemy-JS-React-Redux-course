@@ -1,4 +1,5 @@
 'use strict';
+document.addEventListener('DOMContentLoaded', () => {
 
 const movieDB = {
     movies: [
@@ -11,31 +12,72 @@ const movieDB = {
 };
 
 const adv = document.querySelectorAll('.promo__adv img'),
-    poster = document.querySelector('.promo__bg'),
-    genre = poster.querySelector('.promo__genre'),
-    movieList = document.querySelector('.promo__interactive-list');
-// Remove all ad units from the page (right side of the site)
-adv.forEach(item => {
-    item.remove();
+        poster = document.querySelector('.promo__bg'),
+        genre = poster.querySelector('.promo__genre'),
+        movieList = document.querySelector('.promo__interactive-list'),
+        addForm = document.querySelector('form.add'),
+        addInput = addForm.querySelector('.adding__input'),
+        checkbox = addForm.querySelector('[type="checkbox"]');
+
+    addForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        let newFilm = addInput.value;
+        const favorite = checkbox.checked;
+
+        if (newFilm) {
+            if (newFilm.length > 21) {
+                newFilm = `${newFilm.substring(0, 22)}...`;
+            }
+            if (favorite) {
+                console.log("Додаємо улюблений фільм");
+            }
+            movieDB.movies.push(newFilm);
+            sortArr(movieDB.movies);   
+            createMovieList(movieDB.movies, movieList);
+        }
+        event.target.reset();
+    });
+// take away advertising blocks
+    const deleteAdv = (arr) => {
+        arr.forEach(item => {
+            item.remove();
+        });
+    };
+// make changes to the main poster
+    const makeChanges = () => {
+        genre.textContent = 'драма';
+        poster.style.backgroundImage = 'url("img/bg.jpg")';
+    };
+
+    const sortArr = (arr) => {
+        arr.sort();
+    };
+
+    function createMovieList(films, parent) {
+        parent.innerHTML = "";
+        sortArr(films);
+    
+        films.forEach((film, i) => {
+            parent.innerHTML += `
+                <li class="promo__interactive-item">${i + 1} ${film}
+                    <div class="delete"></div>
+                </li>
+            `;
+        });
+
+        document.querySelectorAll('.delete').forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.remove();
+                movieDB.movies.splice(i, 1);
+
+                createMovieList(films, parent);
+            });
+        });
+    }
+
+    deleteAdv(adv);
+    makeChanges();
+    createMovieList(movieDB.movies, movieList);
+
 });
-// Change movie genre => "comedy" to "drama"
-genre.textContent = 'драма';
-// Change movie poster background to image
-poster.style.backgroundImage = 'url("img/bg.jpg")';
-// Create a list of movies on the page based on the data from this JS file.
-movieList.innerHTML = "";
-movieDB.movies.sort();
-// Add numbering of output films
-movieDB.movies.forEach((film, i) => {
-    movieList.innerHTML += `
-        <li class="promo__interactive-item">${i + 1} ${film}
-            <div class="delete"></div>
-        </li>
-    `;
-});
-
-
-
-
-
-
