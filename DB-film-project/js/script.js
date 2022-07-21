@@ -2,29 +2,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 const movieDB = {
-    movies: [
-        "Логан",
-        "Ліга Справедливості",
-        "Ла-ла ленд",
-        "Одержимість",
-        "Скотт Пілігрим проти..."
+  movies: [
+    "ВарКрафт",
+    "Морбіус",
+    "Трансформери",
+    "Джуманджі",
+    "Сьомий син",
+    "Інший світ"
     ]
 };
 
 const adv = document.querySelectorAll('.promo__adv img'),
-        poster = document.querySelector('.promo__bg'),
-        genre = poster.querySelector('.promo__genre'),
-        movieList = document.querySelector('.promo__interactive-list'),
-        addForm = document.querySelector('form.add'),
-        addInput = addForm.querySelector('.adding__input'),
-        checkbox = addForm.querySelector('[type="checkbox"]');
+    poster = document.querySelector('.promo__bg'),
+    genre = poster.querySelector('.promo__genre'),
+    movieList = document.querySelector('.promo__interactive-list'),
+    // form for adding new movies
+    addForm = document.querySelector('form.add'),
+    addInput = addForm.querySelector('.adding__input'),
+    checkbox = addForm.querySelector('[type="checkbox"]');
 
     addForm.addEventListener('submit', (event) => {
+      // cancel the standard behavior of the browser   
         event.preventDefault();
-
-        let newFilm = addInput.value;
-        const favorite = checkbox.checked;
-
+      // what the user entered in the form field 
+      let newFilm = addInput.value;
+      const favorite = checkbox.checked;
         if (newFilm) {
             if (newFilm.length > 21) {
                 newFilm = `${newFilm.substring(0, 22)}...`;
@@ -36,43 +38,42 @@ const adv = document.querySelectorAll('.promo__adv img'),
             sortArr(movieDB.movies);   
             createMovieList(movieDB.movies, movieList);
         }
-        event.target.reset();
+      event.target.reset();
     });
 // take away advertising blocks
     const deleteAdv = (arr) => {
-        arr.forEach(item => {
-            item.remove();
-        });
+      arr.forEach(item => {
+        item.remove();
+      });
     };
 // make changes to the main poster
     const makeChanges = () => {
-        genre.textContent = 'драма';
-        poster.style.backgroundImage = 'url("img/bg.jpg")';
+      genre.textContent = 'драма';
+      poster.style.backgroundImage = 'url("img/bg.jpg")';
     };
 
-    const sortArr = (arr) => {
-        arr.sort();
-    };
+    const sortArr = (arr) => { arr.sort(); };
 
     function createMovieList(films, parent) {
-        parent.innerHTML = "";
-        sortArr(films);
+      parent.innerHTML = "";
+      sortArr(films);
     
-        films.forEach((film, i) => {
-            parent.innerHTML += `
-                <li class="promo__interactive-item">${i + 1} ${film}
-                    <div class="delete"></div>
-                </li>
-            `;
-        });
+      films.forEach((film, i) => {
+        parent.innerHTML += `
+          <li class="promo__interactive-item">${i + 1} ${film}
+            <div class="delete"></div>
+          </li>
+        `;
+      });
 
         document.querySelectorAll('.delete').forEach((btn, i) => {
-            btn.addEventListener('click', () => {
-                btn.parentElement.remove();
-                movieDB.movies.splice(i, 1);
-
-                createMovieList(films, parent);
-            });
+          btn.addEventListener('click', () => {
+            btn.parentElement.remove();
+        // this method cuts the specified element from the array    
+            movieDB.movies.splice(i, 1);
+        // use recursion to rebuild the information block    
+            createMovieList(films, parent);
+          });
         });
     }
 
