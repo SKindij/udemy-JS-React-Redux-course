@@ -162,10 +162,10 @@ function factorialize(num) {
   return result;
 }
 console.log(factorialize(5)); // => 120
-
-
-
-
+console.log('*****************************************')
+// null merge operator
+let userName; // => undefined
+console.log(userName ?? 'User'); // => User
 
 
 
