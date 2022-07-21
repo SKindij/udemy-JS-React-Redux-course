@@ -71,6 +71,55 @@ function powB (x, n) {
 }
 console.log(powB(2,1), powB(2,3), powB(2,5)); // => 2 8 32
 
+// calculating the overall progress of students
+let students = {
+  js: [{
+    name: 'John',
+    progress: 49
+  }, {
+    name: 'Abraham',
+    progress: 43
+  }],
+
+  html: {
+    basics: [{
+      name: 'Deter',
+      progress: 38
+    }, {
+      name: 'Samanta',
+      progress: 32 
+    }],
+    pro: [{
+      name: 'Hloe',
+      progress: 27 
+    }]
+  }
+};
+
+function getTatalProgressByIteration (data) {
+  let total = 0;
+  let students = 0;
+for (let course of Object.values(data)) {
+  if (Array.isArray(course)) {
+    students += course.length;
+    for (let i = 0; i < course.length; i++) {
+      total += course[i].progress;
+    }
+  } else {
+      for (let subCourse of Object.values(course)) {
+        students += subCourse.length;
+        for (let i = 0; i < subCourse.length; i++) {
+          total += subCourse[i].progress;
+        }
+      }
+  }
+}
+  return total / students;
+}
+console.log(getTatalProgressByIteration(students));
+
+
+
 
 
 
