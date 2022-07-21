@@ -33,5 +33,30 @@ allButtons.forEach(btn => {
 // navigating the DOM tree
 console.log(document.documentElement);
 console.log(document.body.childNodes);
+console.log(document.querySelector('#current'));
+console.log(document.querySelector('#current').parentNode);
+console.log(document.querySelector('#current').parentNode.parentNode);
+
+// data atributes and childs
+console.log(document.querySelector('[data-current="3"]').previousSibling);
+console.log(document.querySelector('[data-current="3"]'));
+console.log(document.querySelector('[data-current="3"]').nextSibling);
+console.log(document.querySelector('[data-current="3"]').nextElementSibling);
+
+console.log('*****************************************')
+for (let node of document.querySelector('main').childNodes) {
+  if (node.nodeName == '#text') {
+    continue;
+  }
+  console.log(node);
+}
+console.log('*****************************************')
+
+// some words about recersion
+
+
+
+
+
 
 
