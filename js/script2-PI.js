@@ -138,6 +138,38 @@ function getTotalProgressByRecursion (data) {
 const recursionResult = getTotalProgressByRecursion (students);
 console.log(recursionResult[0] / recursionResult[1]);
 
+// function that calculates factorial: 5!=1*2*3*4*5=120
+function factorial(n) {
+  if (typeof(n) !== 'number' || !Number.isInteger(n)) {
+      return "Error, check data";
+  }
+  if (n >= 1) {
+      return n * factorial(n - 1);
+  } else {
+      return 1;
+  }
+}
+console.log(factorial(5)); // => 120
+
+function factorialize(num) {
+  let result = num;
+  if (num === 0 || num === 1) 
+    return 1; 
+  while (num > 1) { 
+    num--;
+    result *= num;
+  }
+  return result;
+}
+console.log(factorialize(5)); // => 120
+
+// palindrome is phrase, which reads same backward or forward
+
+
+
+
+
+
 
 
 
