@@ -53,6 +53,25 @@ for (let node of document.querySelector('main').childNodes) {
 console.log('*****************************************')
 
 // some words about recersion
+function powA (x, n) {
+  let result = 1; 
+  for (let k = 1; k <= n; k++) {
+    result *= x;
+  }
+  return result;
+}
+console.log(powA(2,1), powA(2,3), powA(2,5)); // => 2 8 32
+
+function powB (x, n) {
+  if (n === 1) {
+    return x;
+  } else {
+    return x * powB (x, n - 1)
+  }
+}
+console.log(powB(2,1), powB(2,3), powB(2,5)); // => 2 8 32
+
+
 
 
 
