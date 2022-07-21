@@ -72,5 +72,17 @@ a {
   margin: 10px 40px;
 }
 
+/* live collections */
+#liveBoxo {
+  padding: 25px;
+  background-color: indianred;
+}
+.boxo {
+  width: 60px; height: 150px;
+  margin: 5px;
+  border: 2px solid black;
+  background-color: thistle;
+}
+
 
 

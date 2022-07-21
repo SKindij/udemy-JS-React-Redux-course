@@ -167,7 +167,26 @@ console.log('*****************************************')
 let userName; // => undefined
 console.log(userName ?? 'User'); // => User
 
+// static collections
+const boxoQuery = document.querySelectorAll('.boxo');
+  // boxoQuery[0].remove();
+// live collections
+const boxoGet = document.getElementsByClassName('boxo');
+  // boxoGet[0].remove();
 
+console.log(boxoQuery); // => NodeList(3) [div.boxo, div.boxo, div.boxo]
+console.log(boxoGet); // => HTMLCollection(3) [div.boxo, div.boxo, div.boxo]
+  console.log(Array.from(boxoGet)); // => (3) [div.boxo, div.boxo, div.boxo]
+
+const liveBoxo = document.getElementById('liveBoxo');
+liveBoxo.style = 'display: flex';
+for (let el = 0; el < 5; el++) {
+  const divBoxo = document.createElement('div');
+  divBoxo.classList.add('boxo');
+  liveBoxo.append(divBoxo);
+}
+console.log(boxoQuery); // => NodeList(3) [div.boxo, div.boxo, div.boxo]
+console.log(boxoGet); // => HTMLCollection(8) [div.boxo, div.boxo, div.boxo, ...]
 
 
 
