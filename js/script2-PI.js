@@ -308,13 +308,28 @@ for (let shbu of someMap.entries()) {
 console.log('our object is ', descUser);
 const descUserMap = new Map (Object.entries(descUser));
 console.log(descUserMap);
+console.log('*****************************************')
 
+// SET is aray like a unique collection
+const dirtyAray = [1, 1, 4, 8, 8, 2, 3, 3, 6, 9, 9, 7];
+const setAray = new Set(dirtyAray);
+setAray.add(11);
+console.log(setAray); // => Set(9) {1, 4, 8, 2, 3, …}
+console.log(setAray.has(7)); // => true
 
+const secondAray = [];
+setAray.forEach((value) => {
+  secondAray.push((value * 10))
+});
+console.log(secondAray); // => (9) [10, 40, 80, 20, 30, 60, 90, 70, 110]
 
+function uniqueAray(aray) {
+  return Array.from(new Set(aray));
+}
+console.log(uniqueAray(dirtyAray)); // => 
+console.log('*****************************************')
 
-
-
-
+// ...
 
 
 
