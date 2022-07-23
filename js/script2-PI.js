@@ -276,6 +276,42 @@ salaries[Symbol.iterator] = function() {
 for (let res of salaries) {
   console.log(res);
 }
+console.log('*****************************************')
+
+// Map is aray with arays
+const shops = [
+  {rise: 80},
+  {oil: 130},
+  {pasta: 48}
+];
+const someMap = new Map([
+  [{paper: 63}, 6500]
+]);
+someMap.set(shops[0], 3000);
+someMap.set(shops[1], 5000);
+someMap.set(shops[2], 4000);
+console.log(someMap); // => Map(4) {{…} => 6500, {…} => 3000, {…} => 5000, {…} => 4000}
+
+console.log(someMap.get(shops[1])); // => 5000
+console.log(someMap.has(shops[0])); // => true
+console.log(someMap.keys()); // => MapIterator {{…}, {…}, {…}, {…}}
+for (let shop of someMap.keys()) {
+  console.log(shop);
+} // => {paper: 63}, ...
+for (let budjet of someMap.values()) {
+  console.log(budjet);
+} // => 6500, 3000, 5000, 4000
+for (let shbu of someMap.entries()) {
+  console.log(shbu);
+} // => (2) [{…}, 6500], ...
+
+console.log('our object is ', descUser);
+const descUserMap = new Map (Object.entries(descUser));
+console.log(descUserMap);
+
+
+
+
 
 
 
