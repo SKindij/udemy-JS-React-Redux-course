@@ -209,6 +209,30 @@ console.log(symbolObject[idSym]); // => 1
 
   console.log(Object.getOwnPropertySymbols(symbolObject)); // => [Symbol(idSym)]
 
+// object descriptors
+const descUser = {
+  name: 'Corban',
+  surname: 'Dallas',
+  birthday: '08/03/1991',
+  showMyPublicData: function() {
+    console.log(`${this.name} ${`this.surname`}`);
+  }
+}
+// writable || enumerable || configurable
+console.log(Object.getOwnPropertyDescriptor(descUser, 'name')); // => {value: 'Corban', writable: true, enumerable: true, configurable: true}
+Object.defineProperty(descUser, 'birthday', {writable: false});
+// descUser.birthday = '12/05/1993'; => error
+Object.defineProperty(descUser, 'gender', {value: 'male'});
+console.log(Object.getOwnPropertyDescriptor(descUser, 'gender')); // => {value: 'male', writable: false, enumerable: false, configurable: false}
+
+Object.defineProperty(descUser, 'nick', {value: 'cop', enumerable: true, configurable: true});
+console.log(Object.getOwnPropertyDescriptor(descUser, 'nick')); // => {value: 'cop', writable: false, enumerable: true, configurable: true}
+console.log(descUser);
+
+
+
+
+
 
 
 
