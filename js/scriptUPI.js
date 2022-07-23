@@ -19,6 +19,17 @@ btns[4].addEventListener('click', () => {
 }
 )
 
+// delegation of events
+const btnBlock = document.querySelector('.btn-block');
+btnBlock.addEventListener('click', (event) => {
+  if (event.target && event.target.tagName == 'BUTTON') {
+    console.log('I am button.', event.target);
+  }
+});
+const newBtn = document.createElement('button');
+newBtn.classList.add('blue');
+btnBlock.append(newBtn);
+
 
 
 
