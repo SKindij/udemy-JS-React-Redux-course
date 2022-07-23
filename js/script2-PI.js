@@ -193,6 +193,21 @@ boxoQuery.forEach(box => {
   if (box.matches('.needed')) console.log(box);
 }); // =>  <div class="boxo needed"></div>
 // you can copy the selector in the console: #liveBoxo > div.boxo.needed
+// find the closest ancestor by class
+console.log(boxoQuery[0].closest('.liveBoxos'));
+
+console.log('*****************************************')
+// creation of private properties of the object
+  const symbolObject = {
+    nameSym: 'testSym'
+  };
+  let idSym = Symbol('idSym');
+    symbolObject[idSym] = 1;
+console.log(symbolObject); // => {nameSym: 'testSym', Symbol(idSym): 1}
+console.log(symbolObject[idSym]); // => 1
+  for (let value in symbolObject) console.log(value); // => nameSym
+
+  console.log(Object.getOwnPropertySymbols(symbolObject)); // => [Symbol(idSym)]
 
 
 
