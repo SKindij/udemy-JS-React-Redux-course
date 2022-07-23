@@ -229,6 +229,14 @@ Object.defineProperty(descUser, 'nick', {value: 'cop', enumerable: true, configu
 console.log(Object.getOwnPropertyDescriptor(descUser, 'nick')); // => {value: 'cop', writable: false, enumerable: true, configurable: true}
 console.log(descUser);
 
+Object.defineProperty(descUser, 'showMyPublicData', {enumerable: false});
+for (let key in descUser) console.log(key); // => name, surname, birthday, nick 
+
+console.log(Object.getOwnPropertyDescriptor(Math, 'PI')); // => {value: 3.141592653589793, ...: false}
+
+
+
+
 
 
 
