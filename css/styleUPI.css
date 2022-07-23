@@ -22,7 +22,7 @@ button {
   height: 40px;
   background-color: yellow;
   border: none;
-  transition: 0.3s all;
+  transition: 0.54s all;
 }
 
 .blue {
@@ -31,4 +31,8 @@ button {
 
 .red {
     background-color: red;
+}
+
+.superfluous {
+  background-color: chocolate;
 }
