@@ -188,8 +188,11 @@ for (let el = 0; el < 5; el++) {
 console.log(boxoQuery); // => NodeList(3) [div.boxo, div.boxo, div.boxo]
 console.log(boxoGet); // => HTMLCollection(8) [div.boxo, div.boxo, div.boxo, ...]
 
-
-
+// method to search for a specific selector
+boxoQuery.forEach(box => {
+  if (box.matches('.needed')) console.log(box);
+}); // =>  <div class="boxo needed"></div>
+// you can copy the selector in the console: #liveBoxo > div.boxo.needed
 
 
 
