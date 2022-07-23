@@ -326,10 +326,17 @@ console.log(secondAray); // => (9) [10, 40, 80, 20, 30, 60, 90, 70, 110]
 function uniqueAray(aray) {
   return Array.from(new Set(aray));
 }
-console.log(uniqueAray(dirtyAray)); // => 
+console.log(uniqueAray(dirtyAray)); // => (8) [1, 4, 8, 2, 3, 6, 9, 7]
 console.log('*****************************************')
 
-// ...
+// super big numbers
+console.log(Number.MAX_SAFE_INTEGER); // => 9007199254740991 = 2**53-1
+const bigNumberA = 17394594357954723n;
+const bigNumberB = BigInt(17394594357954723);
+console.log(bigNumberA == bigNumberB, bigNumberA === bigNumberB); // => false false
+
+
+
 
 
 
