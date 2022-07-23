@@ -335,7 +335,40 @@ const bigNumberA = 17394594357954723n;
 const bigNumberB = BigInt(17394594357954723);
 console.log(bigNumberA == bigNumberB, bigNumberA === bigNumberB); // => false false
 
-
+// function PANGRAM (sentence has all the letters of the alphabet)
+// №1: string is converted to lowercase before all operations only 1 time
+function isPangram1(string){
+  string = string.toLowerCase();
+  return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x) {
+    return string.indexOf(x) !== -1;
+  });
+}
+// №2: string is converted each time in the callback
+function isPangram2(string){
+  return 'abcdefghijklmnopqrstuvwxyz'
+    .split('')
+    .every((x) => string.toLowerCase().includes(x));
+}
+// №3: with a cycle
+function isPangram3(str) {
+  letters: for (var c = 0; c < 26; c++) {
+      for (let i = 0; i < str.length; i++) {
+          let s = str.charCodeAt(i)
+          if (s < 65 || s > 90 && s < 97 || s > 122) continue
+          if (s === 65 + c || s === 97 + c) continue letters
+      }    
+      return false
+  }
+  return true
+}
+// №4: with Set
+function isPangram4(string) {
+  return new Set(string.toLocaleLowerCase().replace(/[^a-z]/gi, '').split('')).size === 26;
+}
+// №5: using Regular Expressions
+function isPangram(string){
+  return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+}
 
 
 
