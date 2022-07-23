@@ -214,6 +214,7 @@ const descUser = {
   name: 'Corban',
   surname: 'Dallas',
   birthday: '08/03/1991',
+  [Symbol('film')]: '6th element',
   showMyPublicData: function() {
     console.log(`${this.name} ${`this.surname`}`);
   }
@@ -234,6 +235,47 @@ for (let key in descUser) console.log(key); // => name, surname, birthday, nick
 
 console.log(Object.getOwnPropertyDescriptor(Math, 'PI')); // => {value: 3.141592653589793, ...: false}
 
+Object.defineProperties(descUser, {
+  name: {writable: false},
+  surname: {writable: false}
+});
+
+console.log(Object.keys(descUser)); //  =>  ['name', 'surname', 'birthday', 'nick']
+console.log(Object.values(descUser)); // => ['Corban', 'Dallas', '08/03/1991', 'cop']
+console.log(Object.entries(descUser)); // => [['name', 'Corban'], ..., ['nick', 'cop']]
+
+// constructions for iterating the properties
+const strangeWord = ['f', 'u', 't', 'u', 'r', 'e'];
+for (const leter of strangeWord) console.log(leter);
+
+const salaries = {
+  johan: 830,
+  betany: 780,
+  mike: 760,
+  stefany: 790,
+  karl: 850,
+  makeWork: function() {
+    console.log('work done');
+  }
+};
+// create an artificial method for a certain object
+salaries[Symbol.iterator] = function() {
+  return {
+    current: this.johan,
+    last: this.karl,
+    next() {
+      if (this.current < this.last) {
+        this.current += 10;
+        return {done: false, value: this.current}
+      } else {
+        return {done: true}
+      }     
+    }
+  }
+}
+for (let res of salaries) {
+  console.log(res);
+}
 
 
 
