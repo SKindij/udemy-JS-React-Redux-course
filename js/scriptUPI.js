@@ -199,6 +199,17 @@ console.log(divColoredRectangle.calcArea()); // => 8400
 console.log('***********************************************')
 
 // rest parameters
+const log = function(a, b, ...rest) {
+  console.log(a, b, rest);
+}
+log('Ben', 'Franclin', 100, 'dollars', 'bancnote'); // => Ben Franclin (3) [100, 'dollars', 'bancnote']
+
+function calcOrDouble(number, basis = 2) {
+  console.log(number * basis);
+}
+calcOrDouble(7, 9);  // => 63
+calcOrDouble(7);  // => 14
+
 
 
 
