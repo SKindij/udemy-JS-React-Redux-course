@@ -59,11 +59,30 @@ function blockAnimation() {
 }
 animeBlock.addEventListener('click', blockAnimation);
 
-
-
-
-
-
-
+// practice with Dates
+const begining= new Date(0);
+const someDay = new Date('2021-08-01');
+const nowTime = new Date();
+console.log(begining); // => Thu Jan 01 1970 03:00:00 GMT+0300 (Восточная Европа, стандартное время)
+console.log(someDay); // => Sun Aug 01 2021 03:00:00 GMT+0300 (Восточная Европа, летнее время)
+  console.log(someDay.getFullYear()); // => 2021
+  console.log(someDay.getMonth()); // => 7
+  console.log(someDay.getDate()); // => 1
+  console.log(someDay.getDay()); // => 0
+console.log(nowTime); // => Sun Jul 24 2022 13:10:52 GMT+0300 (Восточная Европа, летнее время)
+// What is the difference between my time and Greenwich Mean Time in minutes?
+console.log(nowTime.getTimezoneOffset()); // => -180
+// What is the number of milliseconds that have passed since the start of the countdown?
+console.log(nowTime.getTime()); // => 1658657646667
+// Calculation of the time difference between two dates.
+let startDate = new Date();
+  for (let k = 0; k < 10000; k++) {
+    let some = k ** 2;
+    if (some % 100000 == 0) {
+      console.log(some);
+    }
+  }
+let endDate = new Date();
+console.log(`The cycle worked: ${endDate - startDate} milliseconds.`) // => 10
 
 
