@@ -42,6 +42,25 @@ animeConsole.addEventListener('click', () => {
 })
 clearInterval(timerConsole);
 
+// practice the old method of moving blocks
+function blockAnimation() {
+  const block = document.querySelector('.box-anime');
+  let position = 0;
+  const id = setInterval(frame, 20);
+  function frame() {
+    if (position == 300) {
+      clearInterval(id);
+    } else {
+      position++;
+      block.style.top = position + 'px';
+      block.style.left = position + 'px';
+    }
+  }
+}
+animeBlock.addEventListener('click', blockAnimation);
+
+
+
 
 
 
