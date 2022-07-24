@@ -48,7 +48,7 @@ function blockAnimation() {
   let position = 0;
   const id = setInterval(frame, 20);
   function frame() {
-    if (position == 300) {
+    if (position == 150) {
       clearInterval(id);
     } else {
       position++;
@@ -84,5 +84,16 @@ let startDate = new Date();
   }
 let endDate = new Date();
 console.log(`The cycle worked: ${endDate - startDate} milliseconds.`) // => 10
+
+// MutationObserver
+const mutationBox = document.querySelector('.mutation-box');
+let observer = new MutationObserver(mutationRecord => {
+  console.log(mutationRecord);
+});
+observer.observe(mutationBox, {
+  childList: true
+})
+
+
 
 
