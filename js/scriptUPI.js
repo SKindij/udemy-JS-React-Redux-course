@@ -29,6 +29,19 @@ btnBlock.addEventListener('click', (event) => {
 const newBtn = document.createElement('button');
 newBtn.classList.add('blue');
 btnBlock.append(newBtn);
+console.log('***********************************************')
+
+// live animation
+const animeConsole = document.querySelector('#animeConsole');
+const animeBlock = document.querySelector('#animeBlock');
+let timerConsole;
+animeConsole.addEventListener('click', () => {
+  timerConsole = setTimeout(function() {
+    console.log('Hello. Let\'s go learn animation!')
+  }, 1000);
+})
+clearInterval(timerConsole);
+
 
 
 
