@@ -1,4 +1,5 @@
 'use strict';
+/*
 // learn Promises (ES6)
 console.log('Йде запит данних (Requesting data)...');
 
@@ -61,6 +62,12 @@ Promise.all([test3(15000), test3(16000)]).then(() => {
 Promise.race([test3(17000), test3(18000)]).then(() => {
     console.log('Race promises');
 });
+*/
+
+// методи перебору масивів (array sorting methods)
+
+
+
 
 
 
