@@ -108,7 +108,54 @@ const hloe = new UserAp('Hloe', 12); // UserAp {name: 'Hloe', id: 12, human: tr
 userApData.push(drue, hloe);
 console.log(userApData); // => (2) [UserAp, UserAp]
 
+// the context of the calling of this
+function showThis1() {
+  console.log(this);
+}
+showThis1(); // => Window or undefined (if 'use strict')
 
+function showThis2(a, b) {
+  console.log(this); // => undefined
+  function sum() {
+    console.log(this); // => undefined
+    return a + b;
+  }
+  console.log(sum()); // => undefined
+}
+showThis2(5, 8); // => 13
+
+const funObject = {
+  a: 20,
+  b: 15,
+  showThis: function() {
+    console.log(this); // context here will be the object itself
+  }
+}
+funObject.showThis(); // => {a: 20, b: 15, sum: ƒ}
+
+// this в конструкторах і класах - це новий ексземпляр об'єкту
+// this in constructors and classes is a new object instance
+
+// you can tell the function which context to use
+function sayName(surname) {
+  console.log(this); // => {name: 'Braien'}
+  console.log(this.name + surname); // => BraienWarnhold
+}
+const funUser = {
+  name: 'Braien'
+};
+sayName.call(funUser, 'Warnhold');
+sayName.apply(funUser, ['Warnhold']);
+
+function multiplicateThis(num) {
+  return this * num;
+}
+const multiplic = multiplicateThis.bind(5);
+console.log(multiplic(3)); // => 15
+console.log('***********************************************')
+
+const thisBtn = document.querySelector('#thisBtn');
+thisBtn.addEventListener()
 
 
 
