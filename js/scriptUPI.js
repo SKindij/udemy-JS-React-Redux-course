@@ -152,12 +152,22 @@ function multiplicateThis(num) {
 }
 const multiplic = multiplicateThis.bind(5);
 console.log(multiplic(3)); // => 15
+
+// this in the DOM
+const thisBtn = document.querySelector('#thisBtn');
+thisBtn.addEventListener('click', function() {
+  console.log(this); // => element HTML
+}); // dont use => function with 'this'
 console.log('***********************************************')
 
-const thisBtn = document.querySelector('#thisBtn');
-thisBtn.addEventListener()
+// features of arrow functions
+const double = d => d * 2;
+const multi = (x, y) => x * y;
+console.log(double(7)); // => 14
+console.log(multi(4, 8)); // => 32
+console.log('***********************************************')
 
-
+// clases ES6
 
 
 
