@@ -94,6 +94,26 @@ observer.observe(mutationBox, {
   childList: true
 })
 
+console.log('***********************************************')
+// function constructors ES5
+function UserAp(name, id) {
+  this.name = name;
+  this.id = id;
+  this.human = true;
+}
+const userApData = [];
+// we create new objects based on our function
+const drue = new UserAp('Drue', 11); // UserAp {name: 'Drue', id: 11, human: true}
+const hloe = new UserAp('Hloe', 12); // UserAp {name: 'Hloe', id: 12, human: true}
+userApData.push(drue, hloe);
+console.log(userApData); // => (2) [UserAp, UserAp]
+
+
+
+
+
+
+
 
 
 
