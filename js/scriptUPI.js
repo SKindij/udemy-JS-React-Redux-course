@@ -152,13 +152,13 @@ function multiplicateThis(num) {
 }
 const multiplic = multiplicateThis.bind(5);
 console.log(multiplic(3)); // => 15
+console.log('***********************************************')
 
 // this in the DOM
 const thisBtn = document.querySelector('#thisBtn');
 thisBtn.addEventListener('click', function() {
   console.log(this); // => element HTML
 }); // dont use => function with 'this'
-console.log('***********************************************')
 
 // features of arrow functions
 const double = d => d * 2;
@@ -167,7 +167,40 @@ console.log(double(7)); // => 14
 console.log(multi(4, 8)); // => 32
 console.log('***********************************************')
 
-// clases ES6
+// classes ES6
+class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  calcArea() {
+    return this.height * this.width;
+  }
+}
+
+const square16 = new Rectangle(4, 4);
+console.log(square16.calcArea()); // => 16
+
+class ColoredRectangle extends Rectangle {
+  constructor(height, width, text, bgColor) {
+    super(height, width); // borrows properties from the parent class
+    this.text = text;
+    this.bgColor = bgColor;
+  }
+  showMyProps() {
+    console.log(`Text: ${this.text}, Color: ${this.bgColor}`);
+  }
+}
+
+const divColoredRectangle = new ColoredRectangle(120, 70, 'block article', 'yellow');
+console.log(divColoredRectangle);
+console.log(divColoredRectangle.showMyProps()); // => Text: block article, Color: yellow
+console.log(divColoredRectangle.calcArea()); // => 8400
+console.log('***********************************************')
+
+// rest parameters
+
+
 
 
 
