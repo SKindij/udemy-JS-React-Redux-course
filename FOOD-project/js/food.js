@@ -193,52 +193,68 @@ window.addEventListener('DOMContentLoaded', function() {
         ".menu .container"
     ).render();
 
-    // Forms
+    // get all forms on the page by tag
     const forms = document.querySelectorAll('form');
-    const message = {
+    const message = { // to inform users
         loading: 'Завантаження...',
         success: "Дякую! Скоро ми з вами зв'яжемося",
         failure: 'Щось пішло не так...'
     };
 
-    forms.forEach(item => {
-        postData(item);
-    });
+    forms.forEach(item => { postData(item); });
 
     function postData(form) {
+        // listen to event when trying to submit form
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            e.preventDefault(); // cancel standard reboot in browser
 
             let statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            statusMessage.textContent = message.loading;
-            form.appendChild(statusMessage);
+              statusMessage.classList.add('status');
+              statusMessage.textContent = message.loading;
+                form.appendChild(statusMessage);
         
             const request = new XMLHttpRequest();
-            request.open('POST', 'server.php');
-            request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            const formData = new FormData(form);
-
-            const object = {};
-            formData.forEach(function(value, key){
-                object[key] = value;
-            });
-            const json = JSON.stringify(object);
+              request.open('POST', 'server.php');
+              request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+              // receive data from "inputs" 
+              const formData = new FormData(form);
+              const object = {};
+                formData.forEach(function(value, key){ object[key] = value; });
+                  const json = JSON.stringify(object);
 
             request.send(json);
 
             request.addEventListener('load', () => {
                 if (request.status === 200) {
                     console.log(request.response);
-                    statusMessage.textContent = message.success;
-                    form.reset();
-                    setTimeout(() => {
-                        statusMessage.remove();
-                    }, 2000);
-                } else {
-                    statusMessage.textContent = message.failure;
-                }
+                      statusMessage.textContent = message.success;
+                      form.reset();
+                      setTimeout(() => { statusMessage.remove(); }, 2000);
+                } else { statusMessage.textContent = message.failure; }
             });
         });
+    };
+
+    function showThanksModal(message) {
+        const prevModalDialog = document.querySelector('.modal__dialog');
+          prevModalDialog.classList.add('hide');
+          openModal();
+
+        const thanksModal = document.createElement('div');
+          thanksModal.classList.add('modal__dialog');
+          thanksModal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${message}</div>
+            </div>
+        `;
+        document.querySelector('.modal').append(thanksModal);
+        setTimeout(() => {
+            thanksModal.remove();
+            prevModalDialog.classList.add('show');
+            prevModalDialog.classList.remove('hide');
+            closeModal();
+        }, 4000);
     }
+
 });
