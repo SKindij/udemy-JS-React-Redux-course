@@ -1,10 +1,13 @@
 window.addEventListener('DOMContentLoaded', function() {
+
     // Tabs
+    
 	let tabs = document.querySelectorAll('.tabheader__item'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
 		tabsParent = document.querySelector('.tabheader__items');
 
 	function hideTabContent() {
+        
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
@@ -46,6 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
             seconds = Math.floor( (t/1000) % 60 ),
             minutes = Math.floor( (t/1000/60) % 60 ),
             hours = Math.floor( (t/(1000*60*60) % 24) );
+
         return {
             'total': t,
             'days': days,
@@ -71,13 +75,17 @@ window.addEventListener('DOMContentLoaded', function() {
             minutes = timer.querySelector('#minutes'),
             seconds = timer.querySelector('#seconds'),
             timeInterval = setInterval(updateClock, 1000);
+
         updateClock();
+
         function updateClock() {
             const t = getTimeRemaining(endtime);
+
             days.innerHTML = getZero(t.days);
             hours.innerHTML = getZero(t.hours);
             minutes.innerHTML = getZero(t.minutes);
             seconds.innerHTML = getZero(t.seconds);
+
             if (t.total <= 0) {
                 clearInterval(timeInterval);
             }
@@ -87,9 +95,11 @@ window.addEventListener('DOMContentLoaded', function() {
     setClock('.timer', deadline);
 
     // Modal
+
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
+
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', openModal);
     });
@@ -106,8 +116,9 @@ window.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = 'hidden';
         clearInterval(modalTimerId);
     }
-
+    
     modalCloseBtn.addEventListener('click', closeModal);
+
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
@@ -120,7 +131,9 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // const modalTimerId = setTimeout(openModal, 3000);
+    const modalTimerId = setTimeout(openModal, 300000);
+    // Изменил значение, чтобы не отвлекало
+
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
             openModal();
@@ -130,6 +143,7 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', showModalByScroll);
 
     // Используем классы для создание карточек меню
+
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector, ...classes) {
             this.src = src;
@@ -198,4 +212,53 @@ window.addEventListener('DOMContentLoaded', function() {
         ".menu .container"
     ).render();
 
+    // Forms
+
+    const forms = document.querySelectorAll('form');
+    const message = {
+        loading: 'Загрузка...',
+        success: 'Спасибо! Скоро мы с вами свяжемся',
+        failure: 'Что-то пошло не так...'
+    };
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    function postData(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+            statusMessage.textContent = message.loading;
+            form.appendChild(statusMessage);
+        
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php');
+            request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            const formData = new FormData(form);
+
+            const object = {};
+            formData.forEach(function(value, key){
+                object[key] = value;
+            });
+            const json = JSON.stringify(object);
+
+            request.send(json);
+
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
+                    console.log(request.response);
+                    statusMessage.textContent = message.success;
+                    form.reset();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                    }, 2000);
+                } else {
+                    statusMessage.textContent = message.failure;
+                }
+            });
+        });
+    }
 });
