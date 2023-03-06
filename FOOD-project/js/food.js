@@ -1,18 +1,15 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    // Tabs
-    
+    // Tabs   
 	let tabs = document.querySelectorAll('.tabheader__item'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
 		tabsParent = document.querySelector('.tabheader__items');
 
-	function hideTabContent() {
-        
+	function hideTabContent() {       
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
         });
-
         tabs.forEach(item => {
             item.classList.remove('tabheader__item_active');
         });
@@ -40,7 +37,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     
     // Timer
-
     const deadline = '2023-07-11';
 
     function getTimeRemaining(endtime) {
@@ -49,7 +45,6 @@ window.addEventListener('DOMContentLoaded', function() {
             seconds = Math.floor( (t/1000) % 60 ),
             minutes = Math.floor( (t/1000/60) % 60 ),
             hours = Math.floor( (t/(1000*60*60) % 24) );
-
         return {
             'total': t,
             'days': days,
@@ -68,24 +63,19 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     function setClock(selector, endtime) {
-
         const timer = document.querySelector(selector),
             days = timer.querySelector("#days"),
             hours = timer.querySelector('#hours'),
             minutes = timer.querySelector('#minutes'),
             seconds = timer.querySelector('#seconds'),
             timeInterval = setInterval(updateClock, 1000);
-
         updateClock();
-
         function updateClock() {
             const t = getTimeRemaining(endtime);
-
             days.innerHTML = getZero(t.days);
             hours.innerHTML = getZero(t.hours);
             minutes.innerHTML = getZero(t.minutes);
             seconds.innerHTML = getZero(t.seconds);
-
             if (t.total <= 0) {
                 clearInterval(timeInterval);
             }
@@ -95,7 +85,6 @@ window.addEventListener('DOMContentLoaded', function() {
     setClock('.timer', deadline);
 
     // Modal
-
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
@@ -131,8 +120,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const modalTimerId = setTimeout(openModal, 300000);
-    // Изменил значение, чтобы не отвлекало
+    const modalTimerId = setTimeout(openModal, 250000); // Змінив значення, щоб не відволікало
 
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
@@ -142,8 +130,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', showModalByScroll);
 
-    // Используем классы для создание карточек меню
-
+    // Використовуємо класи для створення карток меню
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector, ...classes) {
             this.src = src;
@@ -156,21 +143,15 @@ window.addEventListener('DOMContentLoaded', function() {
             this.transfer = 27;
             this.changeToUAH(); 
         }
-
-        changeToUAH() {
-            this.price = this.price * this.transfer; 
-        }
-
+        changeToUAH() { this.price = this.price * this.transfer; }
         render() {
             const element = document.createElement('div');
-
             if (this.classes.length === 0) {
                 this.classes = "menu__item";
                 element.classList.add(this.classes);
             } else {
                 this.classes.forEach(className => element.classList.add(className));
             }
-
             element.innerHTML = `
                 <img src=${this.src} alt=${this.alt}>
                 <h3 class="menu__item-subtitle">${this.title}</h3>
@@ -188,8 +169,8 @@ window.addEventListener('DOMContentLoaded', function() {
     new MenuCard(
         "img/tabs/vegy.jpg",
         "vegy",
-        'Меню "Фитнес"',
-        'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
+        'Меню "Фітнес"',
+        'Меню "Фітнес" - це новий підхід до приготування страв: більше свіжих овочів та фруктів. Продукт активних та здорових людей. Це абсолютно новий продукт з оптимальною ціною та високою якістю!',
         9,
         ".menu .container"
     ).render();
@@ -197,8 +178,8 @@ window.addEventListener('DOMContentLoaded', function() {
     new MenuCard(
         "img/tabs/post.jpg",
         "post",
-        'Меню "Постное"',
-        'Меню “Постное” - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.',
+        'Меню "Пісне"',
+        'Меню “Пісне” - це ретельний підбір інгредієнтів: повна відсутність продуктів тваринного походження, молоко з мигдалю, вівса, кокосу чи гречки, правильну кількість білків за рахунок тофу та імпортних вегетаріанських стейків.',
         14,
         ".menu .container"
     ).render();
@@ -206,19 +187,18 @@ window.addEventListener('DOMContentLoaded', function() {
     new MenuCard(
         "img/tabs/elite.jpg",
         "elite",
-        'Меню “Премиум”',
-        'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!',
+        'Меню “Преміум”',
+        'У меню “Преміум” ми використовуємо не лише гарний дизайн упаковки, а й якісне виконання страв. Червона риба, морепродукти, фрукти - ресторанне меню без походу до ресторану!',
         21,
         ".menu .container"
     ).render();
 
     // Forms
-
     const forms = document.querySelectorAll('form');
     const message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Скоро мы с вами свяжемся',
-        failure: 'Что-то пошло не так...'
+        loading: 'Завантаження...',
+        success: "Дякую! Скоро ми з вами зв'яжемося",
+        failure: 'Щось пішло не так...'
     };
 
     forms.forEach(item => {
