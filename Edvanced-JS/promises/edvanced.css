@@ -1,0 +1,36 @@
+/* modern Style Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+/* set main default settings for body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+/* simplify working with images */
+body img {
+  max-width: 100%;
+  display: block;
+}
+/* inheriting fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
+
+:root {
+--SmokyBlack: #100c08;
+--WebGrey: #808080;
+--PaleTurquoise: #afeeee; 
+--Aquamarine: #7fffd4; 
+--DeepPurple:  #602f6b;
+--WebPurple:  #7f007f;  
+--Khaki: #f0e68c; 
+--Goldenrod: #daa520;     
+}
+
+
+
+
+
+
