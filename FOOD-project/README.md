@@ -21,6 +21,10 @@ Promise based HTTP client for the browser and node.js.<br>
 > + Using jsDelivr CDN (ES5 UMD browser module):
 >     - ``<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>``
 
+## cdnjs
+free and open-source CDN service - makes it faster and easier to load library files on your websites
+
+
 
 
 
