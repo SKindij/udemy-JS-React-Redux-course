@@ -41,10 +41,20 @@ function showListOfFilms(movies) {
 }
 showListOfFilms(films); // => 'Titanic, Die hard 5, Matrix, Some bad film'
 
+/* Write a function that will take the same array and return the same array of movies, but each movie will have a new id field. 
+Set the value of this field according to the numbering of the movie. */
+function setFilmsIds(movies) {
+    return movies.map((film, index) => {
+        film.id = index;
+        return film;
+    });
+}
+const tranformedArray = setFilmsIds(films);
+console.log(tranformedArray);
 
+// Write a function that will check that each movie has an id field. If so, the function returns true.
+function checkFilms(arr) {
+    return arr.every(film => film.id || film.id === 0 ? true : false)   
+}
 
-
-
-
-
-
+checkFilms(tranformedArray); // => 
