@@ -11,7 +11,15 @@ Full fake REST API for front-end developers who need a quick back-end for protot
 > + if you make POST, PUT, PATCH or DELETE requests, 
 > changes will be automatically and safely saved to db.json using **lowdb**
 
-
+## Axios
+Promise based HTTP client for the browser and node.js.<br>
+``npm install axios``
+> + you can import the library using import or require approach
+>     - ``import axios, {isCancel, AxiosError} from 'axios';``
+>     - ``import axios from 'axios';``
+>     - ``const axios = require('axios');``
+> + Using jsDelivr CDN (ES5 UMD browser module):
+>     - ``<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>``
 
 
 
