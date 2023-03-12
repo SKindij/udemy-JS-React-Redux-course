@@ -25,6 +25,13 @@ Promise based HTTP client for the browser and node.js.<br>
 free and open-source CDN service - makes it faster and easier to load library files on your websites
 
 
+## Web Storage
+**localStorage** is a property of the global object of the browser (window). It can be accessed as window.localStorage or just localStorage.<br>
+> 1. in Google Chrome open DevTools (F12)
+> 2. go to the **"Resources"** tab 
+> 3. in left panel you will see the localStorage for this domain and all the values that it contains
 
+For each domain, your browser creates its own localStorage object, and it can only be edited or viewed on that domain.
+> ``localStorage.setItem('myKey', 'myValue');``
 
 
