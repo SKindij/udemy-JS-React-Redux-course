@@ -38,10 +38,21 @@ Encapsulation it is a mechanism that integrates data and the code that manipulat
 >     this.say = function() {
 >       console.log(`my position: ${this.position}, & age: ${workerAge}` );
 >     };
+>     this.getAge = function() {
+>       return workerAge;
+>     };
+>     this.setAge = function(age) {
+>       if(typeof(age) === 'number' && age > 18 && age < 90) {
+>         workerAge = age;
+>       } else { console.log("No, it doesn't suit") }
+>     };
 >   };
->   const Serhii = new  OfficeWorker('head of sales', 42);
+>   const Serhii = new  OfficeWorker('head of sales', 41);
 >   console.log(Serhii.position, Serhii.workerAge); // => head of sales undefined
 >   Serhii.say(); // => my position: head of sales, & age: 42
+>    Serhii.setAge = 17;
+>    Serhii.setAge = 42;
+>    Serhii.getAge();
 > ```
 _Private codes or data are only available to other parts of this object._
 
