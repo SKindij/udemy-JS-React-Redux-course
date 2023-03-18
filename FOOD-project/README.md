@@ -48,4 +48,5 @@ Providing the mode configuration option tells webpack to use its built-in optimi
 + An @import statement inside of a css/sass/less file.
 + An image url in a stylesheet url(...) or HTML <img src=...> file.
 
+``npx webpack``
 
