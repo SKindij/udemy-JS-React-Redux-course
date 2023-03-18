@@ -33,5 +33,19 @@ free and open-source CDN service - makes it faster and easier to load library fi
 
 For each domain, your browser creates its own localStorage object, and it can only be edited or viewed on that domain.
 > ``localStorage.setItem('myKey', 'myValue');``
+___
+
+## webpack
+
+Providing the mode configuration option tells webpack to use its built-in optimizations accordingly: ``string = 'production': 'none' | 'development' | 'production'``
+
+**Devtool** -- this option controls if and how source maps are generated.
+
+**webpack modules** can express their dependencies in a variety of ways
++ An ES2015 import statement
++ A CommonJS require() statement
++ An AMD define and require statement
++ An @import statement inside of a css/sass/less file.
++ An image url in a stylesheet url(...) or HTML <img src=...> file.
 
 
