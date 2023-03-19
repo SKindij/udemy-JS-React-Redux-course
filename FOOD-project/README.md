@@ -64,4 +64,17 @@ This value should be treated as the "master" value as it will be the easiest to 
 
 ``const modalTimerId = setTimeout( () => openModal('.modal', modalTimerId), 50000 );``
 
+You can pass an object with a list of arguments to the function.<br>
+``function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCounter,wrapper, field}) { some code };``<br>
+And then use destructuring when we call this function.<br>
+``slider({<br>
+        container: '.offer__slider',<br>
+        slide: '.offer__slide',<br>
+        nextArrow: '.offer__slider-next',<br>
+        prevArrow: '.offer__slider-prev',<br>
+        totalCounter: '#total',<br>
+        currentCounter: '#current',<br>
+        wrapper: '.offer__slider-wrapper',<br>
+        field: '.offer__slider-inner'<br>
+    });``
 
