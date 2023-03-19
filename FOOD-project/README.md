@@ -83,8 +83,8 @@ ___
 
 [Babel](https://babeljs.io/) is a JavaScript compiler. 
 
+So, what's next? [core-js](https://github.com/zloirock/core-js)
 
+This is a polyfill of the [ES6 Promise](https://www.npmjs.com/package/es6-promise).
 
-
-
-
+Provides a polyfill for [Nodelist.prototype.forEach()](https://www.npmjs.com/package/nodelist-foreach-polyfill) to all Browsers supporting ES5.
