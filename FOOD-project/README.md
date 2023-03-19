@@ -88,3 +88,21 @@ So, what's next? [core-js](https://github.com/zloirock/core-js)
 This is a polyfill of the [ES6 Promise](https://www.npmjs.com/package/es6-promise).
 
 Provides a polyfill for [Nodelist.prototype.forEach()](https://www.npmjs.com/package/nodelist-foreach-polyfill) to all Browsers supporting ES5.
+
+> ```javascript
+> "devDependencies": {
+>     "@babel/core": "^7.21.3",
+>     "@babel/preset-env": "^7.20.2",
+>     "babel-loader": "^9.1.2",
+>     "core-js": "^3.29.1",
+>     "json-server": "^0.16.1",
+>     "webpack": "^5.76.2",
+>     "webpack-cli": "^5.0.1"
+>   }
+> ```  
+
+
+
+
+
+
