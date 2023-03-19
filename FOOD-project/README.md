@@ -49,4 +49,14 @@ Providing the mode configuration option tells webpack to use its built-in optimi
 + An image url in a stylesheet url(...) or HTML <img src=...> file.
 
 ``npx webpack``
+___
+## ES6 modules
 
+**export default** can be a function, a class, an object, or something else. 
+This value should be treated as the "master" value as it will be the easiest to import.
+    + ``export default modal;``
+    + ``export {closeModal};``
+    + ``export {openModal};``
+**import** statement is used to import references to values exported from an external module. Imported modules are in strict mode whether you declare them as such or not. For instructions to work in built-in scripts, you need to add ``type="module"`` to the script tag.
+    + ``import modal from './modules/modal';``
+    + ``import {openModal} from './modules/modal';``
