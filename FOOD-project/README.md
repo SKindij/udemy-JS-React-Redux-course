@@ -79,4 +79,12 @@ And then use destructuring when we call this function.<br>
         field: '.offer__slider-inner'
      });
  ```
+___
+
+[Babel](https://babeljs.io/) is a JavaScript compiler. 
+
+
+
+
+
 
