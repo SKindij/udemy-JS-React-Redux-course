@@ -100,9 +100,9 @@ Provides a polyfill for [Nodelist.prototype.forEach()](https://www.npmjs.com/pac
 >     "webpack-cli": "^5.0.1"
 >   }
 > ```  
+___
 
-
-
+You can still find quite a few projects created using **jQuery** library.
 
 
 
