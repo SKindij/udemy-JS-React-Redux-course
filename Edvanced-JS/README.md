@@ -25,7 +25,9 @@ The **function*** declaration defines a **generator** function, which returns a 
 > console.log(scriptStr.next().value); // => 'c'
 > console.log(scriptStr.next().value); // => 'r'
 > ```
+___
 
+``window.requestAnimationFrame()`` method tells browser that you wish to perform animation and requests that browser calls a specified function to update animation before the next repaint. Method takes a callback as an argument to be invoked before the repaint.
 
 
 
