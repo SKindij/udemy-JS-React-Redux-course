@@ -29,6 +29,29 @@ ___
 
 ``window.requestAnimationFrame()`` method tells browser that you wish to perform animation and requests that browser calls a specified function to update animation before the next repaint. Method takes a callback as an argument to be invoked before the repaint.
 
+Animation interface of the **Web Animations API** represents a single animation player and provides playback controls and a timeline for an animation node or source.
++ Animation()
+    - Animation.currentTime
+    - Animation.effect
+    - Animation.finished
+    - Animation.id
+    - Animation.pending
+    - Animation.playState
+    - Animation.playbackRate
+    - Animation.ready
+    - animation.replaceState
+    - Animation.startTime
+    - Animation.timeline
+ + Animation.cancel()
+ + animation.commitStyles()
+ + Animation.finish()
+ + Animation.pause()
+ + animation.persist()
+ + Animation.play()
+ + Animation.reverse()
+ + Animation.updatePlaybackRate()
+ 
+
 
 
 
