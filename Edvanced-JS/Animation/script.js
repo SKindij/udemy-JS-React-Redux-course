@@ -4,7 +4,7 @@ let pos = 0;
 
 // function myAnimation() {
 //     let pos = 0;
-
+    // this method loads computer's processor in vain
 //     const id = setInterval(frame, 10);
 //     function frame() {
 //         if (pos == 300) {
