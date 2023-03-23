@@ -22,3 +22,22 @@ btnPhone.addEventListener('click', () => {
         phoneAnimation.pause();
     }
 });
+
+let bookAnimation;      
+btnMacbook.addEventListener('click', () => {
+    if (!bookAnimation) {
+        bookAnimation = images[1].animate([
+            {transform: 'translateY(0) rotate(0deg)', filter: 'opacity(100%)'},
+            {transform: 'translateY(100px) rotate(180deg)', filter: 'opacity(50%)'},
+            {transform: 'translateY(-100px) rotate(270deg)', filter: 'opacity(75%)'},
+            {transform: 'translateY(0) rotate(360deg)', filter: 'opacity(100%)'}
+        ], {
+            duration: 3000,
+            iterations: Infinity
+        });
+    } else if (bookAnimation.playState === 'paused') {
+        bookAnimation.play();
+    } else {
+        bookAnimation.pause();
+    }
+});
