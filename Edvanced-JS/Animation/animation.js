@@ -5,7 +5,6 @@ const btnPhone = document.querySelector('#iphone'),
       images = document.querySelectorAll('img');
 
 let phoneAnimation;      
-
 btnPhone.addEventListener('click', () => {
     if (!phoneAnimation) {
         phoneAnimation = images[0].animate([
@@ -17,6 +16,9 @@ btnPhone.addEventListener('click', () => {
             duration: 3000,
             iterations: Infinity
         });
+    } else if (phoneAnimation.playState === 'paused') {
+        phoneAnimation.play();
+    } else {
+        phoneAnimation.pause();
     }
-})
-
+});
