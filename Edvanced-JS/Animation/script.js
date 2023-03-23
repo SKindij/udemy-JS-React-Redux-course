@@ -26,7 +26,7 @@ function myAnimation() {
         requestAnimationFrame(myAnimation);
     }
 }
-
+// thanks to arrow function, we postpone execution of our callback with an argument
 btn.addEventListener('click', () => requestAnimationFrame(myAnimation));
 
 let id = requestAnimationFrame(myAnimation);
