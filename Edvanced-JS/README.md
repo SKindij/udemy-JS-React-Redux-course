@@ -62,15 +62,23 @@ When speaking of **function composition** we can think of it as a way of chainin
 > > const discount = normalizePrice(divide100(multiply20(200)));
 > > console.log(discount); // => 40.00
 > > ```
+> This way the result of the inner function is taken by the outer function as an argument until the end of the chain.
+> We have now managed to chain our functions together, we can achieve the same result writing a compose function improving readability:
+> > ```javascript
+> > const compose = (a, b, c) => (x) => a(b(c(x)));
+> > // so our code becomes:
+> > const discount = compose(normalizePrice, divide100, multiply20);
+> > console.log(discount(200)); // => 40.00
+> > ```
 
 
 
 
 
-> * "Function Composition" is applying one function to the results of another.
-> * (g º f)(x) = g(f(x)), first apply f(), then apply g()
-> * We must also respect the domain of the first function
-> * Some functions can be de-composed into two (or more) simpler functions.
+* "Function Composition" is applying one function to the results of another.
+* (g º f)(x) = g(f(x)), first apply f(), then apply g()
+* We must also respect the domain of the first function
+* Some functions can be de-composed into two (or more) simpler functions.
 ___
 
 
