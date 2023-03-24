@@ -62,17 +62,25 @@ When speaking of **function composition** we can think of it as a way of chainin
 > > const discount = normalizePrice(divide100(multiply20(200)));
 > > console.log(discount); // => 40.00
 > > ```
-> This way the result of the inner function is taken by the outer function as an argument until the end of the chain.
-> We have now managed to chain our functions together, we can achieve the same result writing a compose function improving readability:
+> _This way the result of the inner function is taken by the outer function as an argument until the end of the chain.
+> We have now managed to chain our functions together, we can achieve the same result writing a compose function improving readability:_
 > > ```javascript
 > > const compose = (a, b, c) => (x) => a(b(c(x)));
 > > // so our code becomes:
 > > const discount = compose(normalizePrice, divide100, multiply20);
 > > console.log(discount(200)); // => 40.00
 > > ```
-
-
-
+> _we can improve it to accept more than three functions using the higher-order reduceRight function:_
+> > ```javascript
+> > const compose = (...fns) => (x) => fns.reduceRight( (res, fn) => fn(res), x );
+> > ```
+> _what we are doing is that using the spread operator we are transforming the arguments (our functions) into an array 
+> and return a new function that takes an argument “X” that will be used as the initial value of the accumulator of our reduceRight function._
+> > ```javascript
+> > const addPrefix = (price) => "$" + String(price);
+> > const discountWithPrefix = compose(addPrefix, normalizePrice, divide100, multiply20);
+> > console.log(discountWithPrefix(200.0)); // => '$40.00'
+> > ```
 
 
 * "Function Composition" is applying one function to the results of another.
