@@ -89,5 +89,14 @@ When speaking of **function composition** we can think of it as a way of chainin
 * Some functions can be de-composed into two (or more) simpler functions.
 ___
 
+### Ready-made code that can be useful.
+
+* [Tiny Slider 2](https://github.com/ganlanyuan/tiny-slider)
+* [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
+* [Slick last carousel](https://kenwheeler.github.io/slick/)
+* [Galleria — image gallery js framework](https://galleriajs.github.io/)
+* [Fotorama — responsive jQuery image gallery](https://fotorama.io/)
+* [Hammer — recognize gestures made by touch, mouse and pointerEvents](https://hammerjs.github.io/)
+
 
 
