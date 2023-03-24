@@ -52,7 +52,22 @@ Animation interface of the **Web Animations API** represents a single animation 
  + Animation.updatePlaybackRate()
  ___
 
-> * **"Function Composition"** is applying one function to the results of another.
+When speaking of **function composition** we can think of it as a way of chaining multiple functions together to create a new function, in other terms we are solving a problem reducing it into smaller solutions that in themselves don’t accomplish much but together can solve complex tasks.
+> _Let’s take a look at an example, let’s say we want to calculate a 20% discount on a price, we can create three functions like so:_
+> > ```javascript
+> > const multiply20 = (price) => price * 20;
+> > const divide100 = (price) => price / 100;
+> > const normalizePrice = (price) => price.toFixed(2);
+> > // result = a(b(c(x)))
+> > const discount = normalizePrice(divide100(multiply20(200)));
+> > console.log(discount); // => 40.00
+> > ```
+
+
+
+
+
+> * "Function Composition" is applying one function to the results of another.
 > * (g º f)(x) = g(f(x)), first apply f(), then apply g()
 > * We must also respect the domain of the first function
 > * Some functions can be de-composed into two (or more) simpler functions.
