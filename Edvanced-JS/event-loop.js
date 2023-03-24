@@ -12,3 +12,16 @@ setTimeout(() => {
 
 console.log(2);
 
+// interview questions
+setTimeout(() => {
+    console.log(1);
+}, 0);
+console.log(2);
+
+// interview questions
+setTimeout(() => { console.log('time out') });
+
+Promise.resolve()
+  .then( () => console.log('promise') );
+
+console.log('console');
