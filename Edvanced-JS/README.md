@@ -50,8 +50,13 @@ Animation interface of the **Web Animations API** represents a single animation 
  + Animation.play()
  + Animation.reverse()
  + Animation.updatePlaybackRate()
- 
+ ___
 
+> * **"Function Composition"** is applying one function to the results of another.
+> * (g º f)(x) = g(f(x)), first apply f(), then apply g()
+> * We must also respect the domain of the first function
+> * Some functions can be de-composed into two (or more) simpler functions.
+___
 
 
 
