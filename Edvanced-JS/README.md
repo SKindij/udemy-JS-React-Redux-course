@@ -89,7 +89,7 @@ When speaking of **function composition** we can think of it as a way of chainin
 * Some functions can be de-composed into two (or more) simpler functions.
 ___
 
-### Ready-made code that can be useful.
+### Ready-made code that can be useful:
 
 * [Tiny Slider 2](https://github.com/ganlanyuan/tiny-slider)
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
@@ -98,5 +98,11 @@ ___
 * [Fotorama — responsive jQuery image gallery](https://fotorama.io/)
 * [Hammer — recognize gestures made by touch, mouse and pointerEvents](https://hammerjs.github.io/)
 
-
-
+### Useful libraries:
+* [Leaflet.js](https://leafletjs.com/)
+* [D3.js](https://d3js.org/)
+* [Three.js](https://threejs.org/)
+* [Immutable.js](https://immutable-js.github.io/immuta...)
+* [Moment.js](https://momentjs.com/)
+* [Highlight.js](https://highlightjs.org/)
+* [Voca.js](https://vocajs.com/)
