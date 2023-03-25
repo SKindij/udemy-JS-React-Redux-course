@@ -44,6 +44,14 @@ Then open http://localhost:3000/ to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with ``npm run build``.
 ___
 
+### JSX is a syntax extension for JavaScript.
+
+&emsp; JSX creates “React elements”.<br>
+   + you can put any valid JavaScript expression inside {curly braces} in JSX;
+   + once compiled, JSX expressions become regular JavaScript function calls that return JavaScript objects;
+   + you can use JSX inside ``if`` statements and ``for`` loops;
+   + JSX tags can have child elements;
+   + JSX prevents the injection of malicious code
 
 
 
