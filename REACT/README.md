@@ -20,6 +20,7 @@
 &emsp;You don’t have to build your whole page in React. Add React to your existing HTML page, and render interactive React components anywhere on it.<br>
 * it uses an XML-like syntax called JSX;
 * component can store internal state data;
+___
 
 &emsp; [@babel/plugin-transform-react-jsx](https://babeljs.io/docs/babel-plugin-transform-react-jsx)
 > NOTE: This plugin is included in ``@babel/preset-react``
@@ -27,9 +28,12 @@
     - _with this runtime enabled, the functions that JSX compiles to will be imported automatically_
 * React Classic Runtime
     - _if you do not want (or cannot use) auto importing, which is the default behavior for v7 and prior_
+___
 
-
-
-
+> ```
+> npx create-react-app my-app
+> cd my-app
+> npm start
+> ```
 
 
