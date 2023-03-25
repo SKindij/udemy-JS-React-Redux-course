@@ -52,6 +52,14 @@ ___
    + you can use JSX inside ``if`` statements and ``for`` loops;
    + JSX tags can have child elements;
    + JSX prevents the injection of malicious code
+___
+
+&emsp; In practice, most React applications call ``ReactDOM.render()`` only once.
+_React DOM compares an element and its child elements with previous ones and makes only the necessary changes to the DOM to bring the DOM to the desired state._
+
+Components allow you to divide the user interface into independent, reusable parts and treat them as functioning independently of each other.
+> React.Component [API](https://uk.reactjs.org/docs/react-component.html) <br>
+> Always start component names with a capital letter.
 
 
 
