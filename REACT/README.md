@@ -35,11 +35,12 @@ ___
 > cd my-app
 > npm start
 > ```
+> 
 > > _You don’t need to install or configure tools like webpack or Babel._
 > > _They are preconfigured and hidden so that you can focus on the code._
 
-Create a project, and you’re good to go.
-Then open http://localhost:3000/ to see your app.
+Create a project, and you’re good to go.<br>
+Then open http://localhost:3000/ to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with ``npm run build``.
 ___
 
