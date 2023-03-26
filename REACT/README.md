@@ -66,7 +66,11 @@ ___
 ``npm install classnames``
 > ``var classNames = require('classnames');``\
 > ``classNames('foo', 'bar'); // => 'foo bar'``\
+___
 
+**React Fiber Architecture**
+   - [RU article](https://habr.com/ru/post/444276/)
+   - [EN article](https://github.com/acdlite/react-fiber-architecture)
 
 
 
