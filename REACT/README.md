@@ -60,6 +60,12 @@ _React DOM compares an element and its child elements with previous ones and mak
 Components allow you to divide the user interface into independent, reusable parts and treat them as functioning independently of each other.
 > React.Component [API](https://uk.reactjs.org/docs/react-component.html) <br>
 > Always start component names with a capital letter.
+___
+
+[Classnames](https://www.npmjs.com/package/classnames) - simple JavaScript utility for conditionally joining classNames together.\
+``npm install classnames``
+> ``var classNames = require('classnames');``\
+> ``classNames('foo', 'bar'); // => 'foo bar'``\
 
 
 
