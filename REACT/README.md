@@ -71,6 +71,10 @@ ___
 **React Fiber Architecture**
    - [RU article](https://habr.com/ru/post/444276/)
    - [EN article](https://github.com/acdlite/react-fiber-architecture)
+___
+
+&emsp; React provides a declarative API so that you don’t have to worry about exactly what changes on every update. This makes writing applications a lot easier, but it might not be obvious how this is implemented within React. When you use React, at a single point in time you can think of the ``render()`` function as creating a tree of React elements. On the next state or props update, that ``render()`` function will return a different tree of React elements. React then needs to figure out how to efficiently update the UI to match the most recent tree.
+
 
 
 
