@@ -75,6 +75,21 @@ ___
 
 &emsp; React provides a declarative API so that you don’t have to worry about exactly what changes on every update. This makes writing applications a lot easier, but it might not be obvious how this is implemented within React. When you use React, at a single point in time you can think of the ``render()`` function as creating a tree of React elements. On the next state or props update, that ``render()`` function will return a different tree of React elements. React then needs to figure out how to efficiently update the UI to match the most recent tree.
 
+&emsp; [Controlled and uncontrolled form inputs](https://goshacmd.com/controlled-vs-uncontrolled-inputs-react/) in React don't have to be complicated.
+
+|                 feature                 | uncontrolled | controlled |
+|-----------------------------------------|--------------|------------|
+|one-time value retrieval (e.g. on submit)|     ✅      |     ✅     |
+|   validating on submit                  |     ✅      |     ✅     |
+|  instant field validation               |     ❌      |     ✅     |
+|conditionally disabling submit button    |     ❌      |     ✅     |
+|   enforcing input format                |     ❌      |     ✅     |
+|several inputs for one piece of data     |     ❌      |     ✅     |
+|    dynamic inputs                       |     ❌      |     ✅     |
+
+Evaluate your specific situation and pick the approach — what works for you is good enough.
+___
+
 
 
 
