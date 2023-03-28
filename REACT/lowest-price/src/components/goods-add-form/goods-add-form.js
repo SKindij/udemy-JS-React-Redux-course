@@ -19,6 +19,8 @@ class GoodsAddForm extends Component {
       super(props);
       this.state = {
           brand: '',
+          type: '',
+          volume: '',
           price: ''
       }
   }
@@ -29,30 +31,41 @@ class GoodsAddForm extends Component {
   }
 
   render() {
-      const {brand, type, volume, price} = this.state;
+    const {brand, type, volume, price} = this.state;
 
-      return (
-          <div className="app-add-form">
-              <h3>Додайте нову позицію</h3>
-              <form
-                  className="add-form d-flex">
-                  <input type="text"
-                      className="form-control new-post-label"
-                      placeholder="товар різновид міра"
-                      name="brand"
-                      value={[brand, type, volume]} 
-                      onChange={this.onValueChange}/>
-                  <input type="number"
-                      className="form-control new-post-label"
-                      placeholder="Ціна в UAH?"
-                      name="price"
-                      value={price} 
-                      onChange={this.onValueChange}/>
+    return (
+      <div className="app-add-form">
+        <h3>Додайте нову позицію</h3>
+          <form className="add-form d-flex">
+              <input type="text"
+                  className="form-control new-post-label"
+                  placeholder="товар"
+                  name="brand"
+                  value={brand} 
+                  onChange={this.onValueChange}/>
+              <input type="text"
+                  className="form-control new-post-label"
+                  placeholder="різновид"
+                  name="type"
+                  value={type} 
+                  onChange={this.onValueChange}/>
+              <input type="text"
+                  className="form-control new-post-label"
+                  placeholder="міра"
+                  name="volume"
+                  value={volume} 
+                  onChange={this.onValueChange}/>                  
+              <input type="number"
+                  className="form-control new-post-label"
+                  placeholder="Ціна в UAH?"
+                  name="price"
+                  value={price} 
+                  onChange={this.onValueChange}/>
   
-                  <button type="submit"
-                          className="btn btn-outline-light">Додати</button>
-              </form>
-          </div>
+                <button type="submit"
+                    className="btn btn-outline-light">Додати</button>
+          </form>
+      </div>
       )
   }
 }
