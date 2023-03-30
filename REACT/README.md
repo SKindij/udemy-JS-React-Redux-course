@@ -98,8 +98,9 @@ Each instance of RadioButton will have unique htmlId like: id-1, id-2, id-3, id-
   + resetId
   + setPrefix
 
-
-
+&emsp; For the creation of RFC4122 UUIDs — [uuid](https://www.npmjs.com/package/uuid): ``npm install uuid``<br>
+  + ``import { v4 as uuidv4 } from 'uuid';``
+  + ``uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'``
 
 
 
