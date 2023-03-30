@@ -26,8 +26,19 @@ class GoodsAddForm extends Component {
   }
   onValueChange = (e) => {
       this.setState({
+      // brand || type || volume
           [e.target.name] : e.target.value
       })
+  }
+  onSubmit = (e) => {
+    e.preventDefault();
+    this.props.onAdd(this.state.brand, this.state.type, this.state.volume, this.state.price);
+    this.setState({
+      brand: '',
+      type: '',
+      volume: '',
+      salary: ''
+    })
   }
 
   render() {
@@ -36,7 +47,8 @@ class GoodsAddForm extends Component {
     return (
       <div className="app-add-form">
         <h3>Додайте нову позицію</h3>
-          <form className="add-form d-flex">
+          <form className="add-form d-flex"
+            onSubmit = {this.onSubmit}>
               <input type="text"
                   className="form-control new-post-label"
                   placeholder="товар"
