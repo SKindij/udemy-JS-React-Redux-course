@@ -101,6 +101,13 @@ Each instance of RadioButton will have unique htmlId like: id-1, id-2, id-3, id-
 &emsp; For the creation of RFC4122 UUIDs — [uuid](https://www.npmjs.com/package/uuid): ``npm install uuid``<br>
   + ``import { v4 as uuidv4 } from 'uuid';``
   + ``uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'``
+___
+
+&emsp; [Updating an object](https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react/43639228#43639228) with setState in React
+  + updating nested state object
+  + updating array of objects
+  + using hooks in Functional Component
+  + spread operator: ...ES6
 
 
 
