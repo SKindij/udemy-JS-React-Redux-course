@@ -90,6 +90,17 @@ ___
 Evaluate your specific situation and pick the approach — what works for you is good enough.
 ___
 
+&emsp; Generate unique id's in React components (e.g. for accessibility) - [react-id-generator](https://www.npmjs.com/package/react-id-generator) 
+``import nextId from "react-id-generator";``<br>
+Each instance of RadioButton will have unique htmlId like: id-1, id-2, id-3, id-4 and so on.
+  + nextId
+  + useId
+  + resetId
+  + setPrefix
+
+
+
+
 
 
 
