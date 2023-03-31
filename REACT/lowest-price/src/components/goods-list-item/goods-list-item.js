@@ -1,5 +1,6 @@
-import { Component } from 'react';
 import './goods-list-item.css';
+/*
+import { Component } from 'react';
 
 class GoodsListItem extends Component{
   constructor(props) {
@@ -44,6 +45,33 @@ class GoodsListItem extends Component{
       </li>
     )
   }
+}
+*/
+const GoodsListItem = (props) => {
+  const {brand, type, volume, price, onDelete, onToggleProp, wish, star} = props;
+
+  let classNames = "list-group-item d-flex justify-content-between";
+    if (wish) { classNames += ' wish'; };
+    if (star) { classNames += ' like'; };
+
+  return (
+      <li className={classNames}>
+          <span className="list-group-item-label" onClick={onToggleProp} data-toggle="star">{brand} {type} {volume}</span>
+          <input type="text" className="list-group-item-input" defaultValue={price + ' ₴'}/>
+          <div className='d-flex justify-content-center align-items-center'>
+            <button type="button" className="btn-cookie btn-sm "
+              onClick={onToggleProp}
+              data-toggle="wish">
+              <i className="fas fa-cookie"></i>
+            </button>
+            <button type="button" className="btn-trash btn-sm "
+              onClick={onDelete}>
+              <i className="fas fa-trash"></i>
+            </button>
+            <i className="fas fa-star"></i>
+          </div>
+      </li>
+  )
 }
 
 export default GoodsListItem;
