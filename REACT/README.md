@@ -146,5 +146,25 @@ ___
 		``npm install grommet styled-components --save``
 ___
 
+### React, Webpack and CSS Modules [Practical Guide](https://www.triplet.fi/blog/practical-guide-to-react-and-css-modules/)
+> A CSS Module is a CSS file in which all class names and animation names are scoped locally by default.
+> > ```css
+> >   /* select.css */
+> >     .select {}
+> >     .loading {}
+> >     .item {}
+> >     .icon {}
+> > ```
+> > ```javascript
+> >   /* select.js */
+> >     import styles from "./select.css";
+> >     console.log(styles.select, styles.loading);
+> > ```
+
+#### Configure the Create React App to support CSS Modules
+
+
+
+
 
 
