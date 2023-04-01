@@ -171,5 +171,12 @@ ___
 > > **webpack.config.dev.js** is the correct configuration file to modify.
 ___
 
+#### Public class fields
+&emsp; Both **static** and **instance public fields** are writable, enumerable, and configurable properties. As such, unlike their **private** counterparts, they participate in prototype inheritance.
+
+[Static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static) are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+
+
+
 
 
