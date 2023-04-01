@@ -46,7 +46,10 @@ There are two types of ``aria-`` attributes:
 >   suggests themes of loneliness.</p>
 >```  
   
-  
-  
+ Note that the ``alt`` attribute does not reflect the same purpose as the ``figcaption`` element – the purpose of ``alt`` is to provide alternative text for an image, while ``figcaption`` can be a relevant caption for a figure.  
+> ```html
+>  <img src="bobby.jpg" alt="My dog Bobby playing fetch in the park">
+>  <figcaption>Isn’t Bobby cute?</figcaption>  
+> ```
   
   
