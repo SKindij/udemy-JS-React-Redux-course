@@ -39,5 +39,14 @@ There are two types of ``aria-`` attributes:
     </figure>  
     ```  
   
+**Use Semantic HTML Elements Where Possible!**
+> ```html
+> <p>In <cite>The Love Song of J. Alfred Prufock</cite> by T.S. Eliot, 
+>   the clinical imagery of the line <q>Like a patient etherized upon a table</q>
+>   suggests themes of loneliness.</p>
+>```  
+  
+  
+  
   
   
