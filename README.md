@@ -9,10 +9,17 @@
 |              |                |                     |                 |             |            |
 |    react     |       JSX      |         SASS        |  props          |             |            |
 
+### Use ARIA Effectively with HTML5 
 
-
-
-
-
+ARIA roles are added to HTML markup like an attribute. They define the type of element and suggest what purpose it serves. 
+> ```html
+> <header role="banner">
+> <div role="contentinfo">
+>    This website was built by SKj.
+> </div>
+> <a href="aria.html" role="presentation">
+>  <img src="aria-thumbnail.jpg" role="presentation" alt="Use ARIA effectively">
+> </a>
+>```
 
 
