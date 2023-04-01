@@ -118,6 +118,10 @@ ___
 > ```javascript
 >    import { Button } from 'react-bootstrap';
 > ```
+> > ```javascript
+> >  {/* The following line can be included in your src/index.js or App.js file */}
+> >    import 'bootstrap/dist/css/bootstrap.min.css';
+> > ```
 
 [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page) is a React component library for Bootstrap.\
 * ``npm install reactstrap react react-dom``
@@ -165,7 +169,7 @@ ___
 > ``npm run eject  `` \
 > Note: there is no going back after you do this.
 > > **webpack.config.dev.js** is the correct configuration file to modify.
-
+___
 
 
 
