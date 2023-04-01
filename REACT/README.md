@@ -162,8 +162,9 @@ ___
 > > ```
 
 #### Configure the Create React App to support CSS Modules
-
-
+> ``npm run eject  `` \
+> Note: there is no going back after you do this.
+> > **webpack.config.dev.js** is the correct configuration file to modify.
 
 
 
