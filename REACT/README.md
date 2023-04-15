@@ -181,5 +181,37 @@ Runtime type checking for React props and similar objects.\
 [prop-types](https://www.npmjs.com/package/prop-types)\
 `npm install --save prop-types`\
 PropTypes was originally exposed as part of the React core module, and is commonly used with React components.
+- - -
+
+## Deployment
+`npm run build` creates a build directory with a production build of your app. 
+
+If you’re using **Apache HTTP Server**, you need to create a .htaccess file in the public folder that looks like this:
+```  
+    Options -MultiViews
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.html [QSA,L]
+```
+> It will get copied to the **build** folder when you run `npm run build`.
+
+#### GitHub Pages
+
+
+#### Heroku
+After a long, useful run, this buildpack is now at its end of life 🌅
+
+Please look into using [Next.js](https://nextjs.org/) or Remix to develop React apps which are deployable using the [Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs).
+
+This buildpack deploys a React UI as a static web site. 
+[Heroku Buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack/tree/v9.0.1)
+
+
+#### Netlify
+
+
+https://create-react-app.dev/docs/deployment/
+
+
 
 
