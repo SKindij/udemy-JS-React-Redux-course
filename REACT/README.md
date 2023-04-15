@@ -175,8 +175,11 @@ ___
 &emsp; Both **static** and **instance public fields** are writable, enumerable, and configurable properties. As such, unlike their **private** counterparts, they participate in prototype inheritance.
 
 [Static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static) are often utility functions, such as functions to create or clone objects, whereas static properties are useful for caches, fixed-configuration, or any other data you don't need to be replicated across instances.
+---
 
-
-
+Runtime type checking for React props and similar objects.\
+[prop-types](https://www.npmjs.com/package/prop-types)\
+`npm install --save prop-types`\
+PropTypes was originally exposed as part of the React core module, and is commonly used with React components.
 
 
