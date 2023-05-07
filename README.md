@@ -7,7 +7,7 @@
 |              |                |                     |                 |             |            |
 | advanced-JS  |  local server  |     JSON & AJAX     | Promise & Fetch |   webpack   |   Error    |
 |              |                |                     |                 |             |            |
-|    react     |       JSX      |         SASS        |  props          |             |            |
+|    react     |       JSX      |      props          |   state         |   hooks     |   Redux    |
 
 ### Use ARIA Effectively with HTML5 
 
