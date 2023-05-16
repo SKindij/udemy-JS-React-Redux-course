@@ -60,7 +60,7 @@
   + за замовчуванням встановлюється налаштування браузера або ОС за допомогою медіа-запиту `prefers-color-scheme`;
   + керує налаштуванням `.dark-mode className` у body для застосування ваших стилів;
 
-
+#### TOP HOOK LIBRARIES https://www.bornfight.com/blog/top-10-react-hook-libraries/
 
 
 
