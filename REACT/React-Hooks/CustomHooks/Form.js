@@ -5,14 +5,15 @@ const Form = () => {
   const [text, setText] = useState('');
 
   const validateInput = (text) => {
+    // якщо у введенні користувача буде число...
     if ( text.search(/\d/) >= 0 ) {
         return true
     } else {
         return false
     }
   }
-
-  const color = validateInput(text) ? 'text-danget' : null;
+  // ...то будемо зафарбовувати введений текст в червоне 
+  const color = validateInput(text) ? 'text-danger' : null;
 
 
   return (
