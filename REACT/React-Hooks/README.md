@@ -68,9 +68,37 @@
 &emsp; `npm i react-router-dom@5.3.4`\
 https://reactrouter.com/en/main/start/tutorial
 
+### [History API](https://developer.mozilla.org/ru/docs/Web/API/History_API)
+&emsp; DOM-об'єкт Window надає доступ до історії поточної сесії браузера через history об'єкт. Він надає корисні методи та властивості, які дозволяють переходити назад і вперед з історії користувача та маніпулювати її вмістом.
+&emsp; `npm i react-router-dom@6.1.0`\
+Upgrade all <Switch> elements to <Routes>
 
-
-
-
-
-
+> ```javascript
+> // This is a React Router v6 app
+> import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+> 
+> function App() {
+>   return (
+>     <BrowserRouter>
+>       <Routes>
+>         <Route path="/" element={<Home />} />
+>         <Route path="users/*" element={<Users />} />
+>       </Routes>
+>     </BrowserRouter>
+>   );
+> }
+> 
+> function Users() {
+>   return (
+>     <div>
+>       <nav>
+>         <Link to="me">My Profile</Link>
+>       </nav>
+>       <Routes>
+>         <Route path=":id" element={<UserProfile />} />
+>         <Route path="me" element={<OwnUserProfile />} />
+>       </Routes>
+>     </div>
+>   );
+> }
+> ```
