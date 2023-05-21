@@ -212,7 +212,16 @@ PropTypes was originally exposed as part of the React core module, and is common
     title="when-use-react-memo" alt="when-use-react-memo" width="640" height="840"/>  
 </p> 	
 	
-## Оптимізація продуктивності 	https://uk.legacy.reactjs.org/docs/optimizing-performance.html	
+## Оптимізація продуктивності 	
+https://uk.legacy.reactjs.org/docs/optimizing-performance.html	
+
+> _Якщо ви використали Create React App для створення проекту, запустіть:_\
+> ``npm run build``\
+> _Ця команда створить продакшн-збірку у папці build/ вашого додатку._
+
+&emsp; react-dom 16.5+ та react-native 0.57+ надають додаткові можливості профілювання в режимі розробки з використанням профайлера React DevTools.	
+	
+	
 	
 	
 - - -
