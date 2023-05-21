@@ -204,12 +204,17 @@ Runtime type checking for React props and similar objects.\
 [prop-types](https://www.npmjs.com/package/prop-types)\
 `npm install --save prop-types`\
 PropTypes was originally exposed as part of the React core module, and is commonly used with React components.
+
+- - -		
 	
 <p align="center">
   <img src="https://github.com/SKindij/SKindij/blob/main/recources/when-use-react-memo.jpg" 
     title="when-use-react-memo" alt="when-use-react-memo" width="640" height="840"/>  
 </p> 	
-					
+	
+## Оптимізація продуктивності 	https://uk.legacy.reactjs.org/docs/optimizing-performance.html	
+	
+	
 - - -
 
 ## Deployment
