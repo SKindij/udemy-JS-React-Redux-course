@@ -42,7 +42,8 @@ ___
 Create a project, and you’re good to go.<br>
 Then open http://localhost:3000/ to see your app.<br>
 When you’re ready to deploy to production, create a minified bundle with ``npm run build``.
-___
+
+- - -
 
 ### JSX is a syntax extension for JavaScript.
 
@@ -52,7 +53,23 @@ ___
    + you can use JSX inside ``if`` statements and ``for`` loops;
    + JSX tags can have child elements;
    + JSX prevents the injection of malicious code
-___
+
+> _You have 3 ways of adding comments in a React component:_
+> ```javascript
+>  function MyComponent() {
+>    return (
+>      // Comment around JSX
+>      <div>
+>        {/* Comment inside JSX */}
+>        <Hello // comment inside JSX tag
+>          message="Hello, World!" // comment inside JSX tag
+>        /> 
+>      </div>
+>    )
+>  }
+> ```
+
+- - -
 
 &emsp; In practice, most React applications call ``ReactDOM.render()`` only once.
 _React DOM compares an element and its child elements with previous ones and makes only the necessary changes to the DOM to bring the DOM to the desired state._
@@ -60,7 +77,8 @@ _React DOM compares an element and its child elements with previous ones and mak
 Components allow you to divide the user interface into independent, reusable parts and treat them as functioning independently of each other.
 > React.Component [API](https://uk.reactjs.org/docs/react-component.html) <br>
 > Always start component names with a capital letter.
-___
+
+- - -
 
 [Classnames](https://www.npmjs.com/package/classnames) - simple JavaScript utility for conditionally joining classNames together.\
 ``npm install classnames``
@@ -71,7 +89,8 @@ ___
 **React Fiber Architecture**
    - [RU article](https://habr.com/ru/post/444276/)
    - [EN article](https://github.com/acdlite/react-fiber-architecture)
-___
+
+- - -
 
 &emsp; React provides a declarative API so that you don’t have to worry about exactly what changes on every update. This makes writing applications a lot easier, but it might not be obvious how this is implemented within React. When you use React, at a single point in time you can think of the ``render()`` function as creating a tree of React elements. On the next state or props update, that ``render()`` function will return a different tree of React elements. React then needs to figure out how to efficiently update the UI to match the most recent tree.
 
@@ -88,7 +107,8 @@ ___
 |    dynamic inputs                       |     ❌      |     ✅     |
 
 Evaluate your specific situation and pick the approach — what works for you is good enough.
-___
+
+- - -
 
 &emsp; Generate unique id's in React components (e.g. for accessibility) - [react-id-generator](https://www.npmjs.com/package/react-id-generator) 
 ``import nextId from "react-id-generator";``<br>
@@ -108,7 +128,8 @@ ___
   + updating array of objects
   + using hooks in Functional Component
   + spread operator: ...ES6
-___
+
+- - -
 
 ### front-end framework for react
 
@@ -148,7 +169,8 @@ ___
 	- GitHub: https://github.com/grommet/grommet
 	- web: https://v2.grommet.io/ <br>
 		``npm install grommet styled-components --save``
-___
+
+- - -
 
 ### React, Webpack and CSS Modules [Practical Guide](https://www.triplet.fi/blog/practical-guide-to-react-and-css-modules/)
 > A CSS Module is a CSS file in which all class names and animation names are scoped locally by default.
@@ -169,7 +191,8 @@ ___
 > ``npm run eject  `` \
 > Note: there is no going back after you do this.
 > > **webpack.config.dev.js** is the correct configuration file to modify.
-___
+
+- - -
 
 #### Public class fields
 &emsp; Both **static** and **instance public fields** are writable, enumerable, and configurable properties. As such, unlike their **private** counterparts, they participate in prototype inheritance.
@@ -181,6 +204,7 @@ Runtime type checking for React props and similar objects.\
 [prop-types](https://www.npmjs.com/package/prop-types)\
 `npm install --save prop-types`\
 PropTypes was originally exposed as part of the React core module, and is commonly used with React components.
+	
 - - -
 
 ## Deployment
