@@ -106,5 +106,41 @@
 > >  export { ProductList };
 > > ```
 
+> _Далі створимо компонент під назвою ProductsData, який запитує дані про товари через API._
+> > ```javascript
+> >  import React, { Component } from "react";
+> >  
+> >  class ProductData extends Component {
+> >    state = {
+> >      products: []
+> >    };
+> >  
+> >    componentDidMount() {
+> >      getProducts().then(products => {
+> >        this.setState({
+> >          products
+> >        });
+> >      });
+> >    }
+> >  
+> >    render() {
+> >      return 'what should we return here?';
+> >      // в одному місці ми вкажемо йому відрендерити ProductList, а в адміністративній панелі – ProductTable
+> >    }
+> >  }
+> >  export { ProductData };
+> > ```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
