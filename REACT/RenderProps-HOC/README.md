@@ -131,15 +131,15 @@
 > >  export { ProductData };
 > > ```
 
+&emsp; Тут у гру вступають **render props** та **HOC** (компоненти вищого порядку). Вони є лише способами, за допомогою яких компонент дізнається, що йому потрібно відрендерити. Це збільшує можливість повторного використання коду.
 
+...повний текст у статті https://medium.com/nuances-of-programming/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-react-render-props-%D0%B8-hoc-263f498ac841
 
+- - -
 
+## Чи зможуть React-хуки замінити компоненти вищого ладу (HOC)?
 
-
-
-
-
-
+стаття: https://css-live.ru/articles/smogut-li-react-xuki-zamenit-komponenty-vysshego-poryadka-hoc.html
 
 
 
