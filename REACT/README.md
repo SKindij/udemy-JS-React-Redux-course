@@ -221,6 +221,51 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
 
 &emsp; react-dom 16.5+ та react-native 0.57+ надають додаткові можливості профілювання в режимі розробки з використанням профайлера React DevTools.	
 	
+- - -
+	
+## Допоміжні інструменти
+
+### [TOP 10 REACT HOOK LIBRARIES](https://www.bornfight.com/blog/top-10-react-hook-libraries/)
++ **use-http** https://github.com/ava/use-http
+  - використовується як заміна Fetch API;
+  - використовує TypeScript і підтримує SSR і GraphQL;
+  - повертає response, loading, error data та методи запиту (Get, Post, Put, Patch, Delete);
++ **useMedia** https://github.com/streamich/use-media
+  - забезпечує спрощений підхід до відстеження медіа-запиту CSS;
+  - це дійсно важливо для швидкої реакції будь-якої програми чи веб-сайту;	
++ **Constate** https://github.com/diegohaz/constate	
+  - забезпечує підняття	local state до React Context;
+  - це корисно у випадках, коли ви хочете надати той самий state кільком компонентам;
++ **Redux hooks** https://react-redux.js.org/api/hooks	
+  - він використовується як глобальний менеджер стану у всій програмі;
+  - він пропонує альтернативу шаблону HOC з існуючим методом connect();
+  - найбільш відомі: useSelector, useDispatch, useStore;
++ **React hook form** https://react-hook-form.com/	
+  - це бібліотека, схожа на форми Formik та Redux, але краща;	
+  - він навіть пропонує свій конструктор форм, що чудово;	
++ **useDebounce** https://github.com/xnimorz/use-debounce	
+  - використовується для відкладення виконання функції на більш пізній час;
+  - часто використовується в inputs і forms, які отримують дані;	
++ **useLocalStorage** https://github.com/rehooks/local-storage	
+  - це дійсно корисно для вилучення та встановлення даних у локальному сховищі;
+  - пропонує автоматичну JSON-серіалізацію та синхронізацію на кількох вкладках;
+  - він написаний на TypeScript, тому пропонує типи;	
++ **usePortal** https://github.com/alex-cory/react-useportal
+  - робить створення випадаючих списків, модальних та спливаючих вікон, підказок… надзвичайно простим!
+  - він також дозволяє створювати елементи поза ієрархією DOM програми;
+  - працює з SSR як ізоморфний;	
++ **useHover**	https://github.com/andrewbranch/react-use-hover
+  - визначає, чи наведено курсор на елемент React;
+  - пропонує затримку ефекту наведення та підтримує TypeScript;	
++ **React router hooks** https://reactrouter.com/en/6.11.2	
+  - useHistory
+  - useLocation
+  - useParams
+  - useRouteMatch	
+	
+	
+	
+	
 	
 	
 	
