@@ -1,5 +1,8 @@
 # React Transition Group
 
+> &emsp;_Це бібліотека від React спільноти, що надає потрібні component для використання у програмі React, 
+> допомагає створити анімаційний ефект під час переходу, і також допомагає вам легше працювати з CSS Transition._
+
 * website: https://reactcommunity.org/react-transition-group/
 * Installation: ``npm install react-transition-group --save``
 
@@ -17,12 +20,21 @@ Components:
   - use it when you want to control the render between state transitions;
   - it is based on the selected mode and the child's key which is the Transition or CSSTransition component, and makes a consistent transition between them;
 + TransitionGroup
-- manages a set of transition components (<Transition> and <CSSTransition>) in a list;
-- it is a state machine for managing the mounting and unmounting of components over time;
+  - manages a set of transition components (<Transition> and <CSSTransition>) in a list;
+  - it is a state machine for managing the mounting and unmounting of components over time;
 
+> &emsp;_Компонент **Transition** дозволяє описати **transition (перехід)**, щоб конвертувати даний статус інтерфейсу в новий статус інтерфейсу в певному часі._
+  
+- - -
 
+## starter-app
 
-
-
-
+> &emsp;_Якщо проект має файл **package.json**, то запустивши:_  ``npm install`` _встановиться усе, що потрібно проекту,_\
+> _у папку **node_modules**, створивши її, якщо вона ще не існує._
+  
+  
+  
+  
+  
+  
 
