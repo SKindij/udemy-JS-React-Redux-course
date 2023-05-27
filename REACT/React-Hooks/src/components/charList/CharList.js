@@ -1,9 +1,10 @@
 import {useState, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
+import useMarvelService from '../../services/MarvelService';
 import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
-import useMarvelService from '../../services/MarvelService';
 import './charList.scss';
 
 const CharList = (props) => {
@@ -59,6 +60,7 @@ const CharList = (props) => {
         } 
 
       return (
+       <CSSTransition key={item.id} timeout={500} classNames="char__item"> 
         <li className="char__item" tabIndex={0} key={item.id}
           ref={el => itemRefs.current[i] = el}
           onClick={() => {
@@ -68,12 +70,15 @@ const CharList = (props) => {
             <img src={item.thumbnail} alt={item.name} style={imgStyle}/>
             <div className="char__name">{item.name}</div>
         </li>
+       </CSSTransition>
       )
     } );
     // this design is made to center spinner / error
     return (
         <ul className="char__grid">
-            {items}
+          <TransitionGroup component={null}>
+              {items}
+          </TransitionGroup>
         </ul>
     )
   }
@@ -81,14 +86,13 @@ const CharList = (props) => {
   const items = renderItems(charList);
 
   const errorMessage = error ? <ErrorMessage/> : null;
-  const spinner = loading ? <Spinner/> : null;
-  const content = !(loading || error) ? items : null;
+  const spinner = loading && !newItemLoading ? <Spinner/> : null;
 
   return (
       <div className="char__list">
         {errorMessage}
         {spinner}
-        {content}       
+        {items}       
         <button className="button button__main button__long"
             disabled={newItemLoading}
             style={{'display': charEnded ? 'none' : 'block'}}
