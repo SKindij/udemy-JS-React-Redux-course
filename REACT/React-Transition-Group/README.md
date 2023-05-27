@@ -1,4 +1,4 @@
-# React Transition Group
+## React Transition Group
 
 > &emsp;_Це бібліотека від React спільноти, що надає потрібні component для використання у програмі React, 
 > допомагає створити анімаційний ефект під час переходу, і також допомагає вам легше працювати з CSS Transition._
@@ -27,10 +27,40 @@ Components:
   
 - - -
 
+## React-Motion
+  
+* website: https://github.com/chenglou/react-motion
+* Installation: ``npm install --save react-motion``
+  
+- - -  
+   
 ## starter-app
 
 > &emsp;_Якщо проект має файл **package.json**, то запустивши:_  ``npm install`` _встановиться усе, що потрібно проекту,_\
 > _у папку **node_modules**, створивши її, якщо вона ще не існує._
+    
+```javascript
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "react-transition-group": "^",
+    "styled-components": "^5.3.11",
+    "web-vitals": "^3.3.1"
+  },
+```   
+  
+  
+  
+  
+  
+  
+  
   
   
   
