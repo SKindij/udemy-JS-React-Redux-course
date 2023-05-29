@@ -131,47 +131,6 @@ ___
 
 - - -
 
-### front-end framework for react
-
-[React-Bootstrap](https://react-bootstrap.github.io/) replaces the Bootstrap JavaScript.\
-* ``npm install react-bootstrap bootstrap``
-* ``npm install sass``
-> ```javascript
->    import { Button } from 'react-bootstrap';
-> ```
-> > ```javascript
-> >  {/* The following line can be included in your src/index.js or App.js file */}
-> >    import 'bootstrap/dist/css/bootstrap.min.css';
-> > ```
-
-[Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page) is a React component library for Bootstrap.\
-* ``npm install reactstrap react react-dom``
-* ``npm install --save bootstrap``
-  + ``import 'bootstrap/dist/css/bootstrap.min.css';``
-
-* Baseweb 
-	- GitHub: https://github.com/uber/baseweb
-	- web: https://baseweb.design/ <br>
-		``npm install baseui styletron-react styletron-engine-monolithic``
-* Material UI
-	- GitHub: https://github.com/mui/material-ui
-	- web: https://mui.com/core/ <br>
-		``npm install @mui/material @emotion/react @emotion/styled``
-* Evergreen
-	- GitHub: https://github.com/segmentio/evergreen
-	- web: https://evergreen.segment.com/ <br>
-		``npm install --save evergreen-ui``
-* Rebass
-	- GitHub: https://github.com/rebassjs/rebass
-	- web: https://rebassjs.org/ <br>
-		``npm i rebass``
-* Grommet
-	- GitHub: https://github.com/grommet/grommet
-	- web: https://v2.grommet.io/ <br>
-		``npm install grommet styled-components --save``
-
-- - -
-
 ### React, Webpack and CSS Modules [Practical Guide](https://www.triplet.fi/blog/practical-guide-to-react-and-css-modules/)
 > A CSS Module is a CSS file in which all class names and animation names are scoped locally by default.
 > > ```css
@@ -264,12 +223,15 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - useRouteMatch	
 	
 ### [List of the Best React Component Libraries](https://technostacks.com/blog/react-component-libraries/)
-+ **Material UI** https://mui.com/core/
++ **Material UI**
   - використовується в Material Design від Google;
+      * GitHub: https://github.com/mui/material-ui
+      * web: https://mui.com/core/
   - він добре відомий своєю швидшою та простішою веб-розробкою;
   - ви можете швидко створити свою систему дизайну або почати з матеріального дизайну;
+      *	``npm install @mui/material @emotion/react @emotion/styled``
   - містить набір цікавих, готових до використання компонентів, які можна підключити до будь-якої програми;
-  - він також пропонує ряд інструментів і API для вдосконалення створення додатків;
+  - він також пропонує ряд інструментів і API для вдосконалення створення додатків;	
 + **Ant Design** https://ant.design/
   - базується на дизайні Ant Design від Alibaba з китайським корінням;
   - це система проектування продуктів на рівні підприємства;
@@ -280,9 +242,23 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
 + **React-Bootstrap** https://react-bootstrap.github.io/
   - містить елементи створення інтерфейсу користувача для веб- і мобільних додатків;
   - це повне оновлення для React взагалі;
+      * ``npm install react-bootstrap bootstrap``
+      * ``npm install sass``
   - зі своїми компонентами він працює без залежностей bootstrap.js або jQuery;
   - він має довгий список компонентів, що мають повну владу над кожним із них;
   - замість цілої бібліотеки ви можете просто імпортувати окремі компоненти, такі як React-Bootstrap/button;
+      * > ```javascript
+        >    import { Button } from 'react-bootstrap';
+        > ```
+      * > > ```javascript
+        > >  {/* The following line can be included in your src/index.js or App.js file */}
+        > >    import 'bootstrap/dist/css/bootstrap.min.css';
+        > > ```
++ [Reactstrap](https://reactstrap.github.io/?path=/story/home-installation--page)
+  - it is React component library for Bootstrap;
+  - ``npm install reactstrap react react-dom``
+  - ``npm install --save bootstrap``
+      * ``import 'bootstrap/dist/css/bootstrap.min.css';``
 + **Blueprint UI** https://blueprintjs.com/
   - спеціалізується на побудові інструментів для внутрішнього використання;
   - він «розроблений для створення складних інтерфейсів з великою кількістю даних для настільних програм;
@@ -294,7 +270,10 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - компоненти з поведінкою та графікою схожі на Office;
   - забезпечує сумісність із desktop, пристроями iOS та Android;
   - це одна з найкращих бібліотек React для веб-розробки;
-+ **Grommet** https://v2.grommet.io/	
++ **Grommet**
+  - GitHub: https://github.com/grommet/grommet
+  - web: https://v2.grommet.io/
+      * ``npm install grommet styled-components --save``	
   - має підтримку респонсивного дизайну, що спрощує адаптацію до різних пристроїв;
   - він забезпечує більш яскравий вигляд і відчуття, ніж інші альтернативи, такі як material UI або Ant;
   - він має можливість забезпечувати доступність, оперативність, модульність і тематизацію всього;
@@ -303,7 +282,10 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - він спрямований на те, щоб витрачати менше часу на написання коду та більше часу на створення фантастичного досвіду користувача;
   - компоненти також доступні та відповідають стандартам WAI-ARIA;
   - у вас буде як світлий, так і темний користувальницький інтерфейс, теми та 49 компонентів, включаючи введення, гармошки, іконки та підказки;
-+ Evergreen https://evergreen.segment.com/
++ Evergreen
+  - GitHub: https://github.com/segmentio/evergreen
+  - web: https://evergreen.segment.com/
+      * ``npm install --save evergreen-ui``
   - надає базові компоненти, які можна налаштовувати за допомогою CSS;
   - базується на системі проектування Segment;
   - він має 30+ компонентів, побудованих на основі примітиву React UI;
@@ -316,18 +298,18 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - вирішує проблему копіювання та вставлення різних хуків React шляхом абстрагування деталей d3 і надання компонентів і утиліт у стандартних API React і шаблонах;
   - опис, інструкції зі встановлення та інтеграції, список API включені для кожного компонента;
   - усі приклади містять URL-адреси CodeSandbox;
-+ Rebass https://rebassjs.org/
-  - він поставляється з базовою колекцією примітивних компонентів, які можна «розробити» для створення найкращої бібліотеки компонентів React UI зі стандартним API і темами дизайну;
++ Rebass 
+  - GitHub: https://github.com/rebassjs/rebass
+  - web: https://rebassjs.org/
+      * ``npm i rebass``
+  - він поставляється з базовою колекцією примітивних компонентів, які можна «розробити» для створення найкращої бібліотеки компонентів React UI зі стандартним API і темами дизайну;	
   - примітиви для структури додатка (адаптивні вікна та макети flexbox), текст (заголовок, текст, посилання, кнопка), фотографії, картки та форми – все це включено до основи;
   - він також пропонує найкращу документацію про рецепти для типових випадків використання, таких як сітки, панель навігації та картки зображень;
-  — Компонент ThemeProvider використовується для застосування тем у Rebass.
-	
-	
-	
-	
-	
-	
-
+  — Компонент ThemeProvider використовується для застосування тем у Rebass.	 
++ Baseweb 
+  - GitHub: https://github.com/uber/baseweb
+  - web: https://baseweb.design/ <br>
+      * ``npm install baseui styletron-react styletron-engine-monolithic``
 
 - - -
 
