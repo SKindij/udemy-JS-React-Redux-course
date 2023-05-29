@@ -199,9 +199,33 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - він використовується як глобальний менеджер стану у всій програмі;
   - він пропонує альтернативу шаблону HOC з існуючим методом connect();
   - найбільш відомі: useSelector, useDispatch, useStore;
-+ **React hook form** https://react-hook-form.com/	
-  - це бібліотека, схожа на форми Formik та Redux, але краща;	
-  - він навіть пропонує свій конструктор форм, що чудово;	
++ **React hook form** 
+  - web: https://react-hook-form.com/	
+  - ефективні, гнучкі та розширювані форми з простою перевіркою;
+  - це бібліотека, схожа на форми Formik та Redux, але краща;
+      * ``npm install react-hook-form``
+  - він навіть пропонує свій конструктор форм, що чудово;
++ **Yup**
+  - GitHub: https://github.com/jquense/yup
+  - конструктор схем для аналізу та перевірки значення під час виконання;
+      * define a schema, 
+      * transform a value to match, 
+      * assert shape of existing value, or both;
+  - Yup схеми надзвичайно виразні та дозволяють моделювати складні, взаємозалежні перевірки або трансформацію цінностей;		
++ **Formik**
+  - web: https://formik.org/docs/overview
+      * ``npm install formik --save``
+  - невелика бібліотека, яка допоможе вам із 3 найбільш неприємними частинами:
+      * Getting values in and out of form state
+      * Validation and error messages
+      * Handling form submission
++ **Final Form**
+  - web: https://final-form.org/react/
+      * ``npm install --save final-form react-final-form``
+  - Modular
+  - Zero Dependencies
+  - High Performance
+  - Hooks Compatible
 + **useDebounce** https://github.com/xnimorz/use-debounce	
   - використовується для відкладення виконання функції на більш пізній час;
   - часто використовується в inputs і forms, які отримують дані;	
@@ -310,7 +334,7 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - GitHub: https://github.com/uber/baseweb
   - web: https://baseweb.design/ <br>
       * ``npm install baseui styletron-react styletron-engine-monolithic``
-
+	
 - - -
 
 ## Deployment
