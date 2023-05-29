@@ -199,7 +199,7 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - він використовується як глобальний менеджер стану у всій програмі;
   - він пропонує альтернативу шаблону HOC з існуючим методом connect();
   - найбільш відомі: useSelector, useDispatch, useStore;
-+ **React hook form** 
++ **React hook form** 🌟
   - web: https://react-hook-form.com/	
   - ефективні, гнучкі та розширювані форми з простою перевіркою;
   - це бібліотека, схожа на форми Formik та Redux, але краща;
@@ -240,14 +240,15 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
 + **useHover**	https://github.com/andrewbranch/react-use-hover
   - визначає, чи наведено курсор на елемент React;
   - пропонує затримку ефекту наведення та підтримує TypeScript;	
-+ **React router hooks** https://reactrouter.com/en/6.11.2	
++ **React router hooks** 🌟
+  - web: https://reactrouter.com/en/6.11.2	
   - useHistory
   - useLocation
   - useParams
   - useRouteMatch	
 	
 ### [List of the Best React Component Libraries](https://technostacks.com/blog/react-component-libraries/)
-+ **Material UI**
++ **Material UI** 🌟
   - використовується в Material Design від Google;
       * GitHub: https://github.com/mui/material-ui
       * web: https://mui.com/core/
@@ -263,7 +264,8 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
   - ви можете розглянути дизайн і розробку повнорозмірної програми;
   - найбільш використовувані компоненти: вибір дати, випадаюче меню, значок, кнопка;
   - Ant Design Pro поставляється з шаблонами, компонентами та набором для проектування.
-+ **React-Bootstrap** https://react-bootstrap.github.io/
++ **React-Bootstrap** 🌟
+  - web: https://react-bootstrap.github.io/
   - містить елементи створення інтерфейсу користувача для веб- і мобільних додатків;
   - це повне оновлення для React взагалі;
       * ``npm install react-bootstrap bootstrap``
@@ -349,10 +351,10 @@ If you’re using **Apache HTTP Server**, you need to create a .htaccess file in
 ```
 > It will get copied to the **build** folder when you run `npm run build`.
 
-#### GitHub Pages
+#### GitHub Pages ✨
 
 
-#### Heroku
+#### Heroku ✨
 After a long, useful run, this buildpack is now at its end of life 🌅
 
 Please look into using [Next.js](https://nextjs.org/) or Remix to develop React apps which are deployable using the [Node.js buildpack](https://github.com/heroku/heroku-buildpack-nodejs).
@@ -361,7 +363,7 @@ This buildpack deploys a React UI as a static web site.
 [Heroku Buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack/tree/v9.0.1)
 
 
-#### Netlify
+#### Netlify ✨
 
 
 https://create-react-app.dev/docs/deployment/
