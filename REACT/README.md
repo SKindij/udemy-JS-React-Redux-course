@@ -393,4 +393,17 @@ _Якщо в двох словах, то даний інструмент доз�
 
 [React Helmet](https://github.com/nfl/react-helmet) This reusable React component will manage all of your changes to the document head.
 
+- - -
 
+### state machine
+Це абстрактна концепція, відповідно до якої машина може мати різні стани, але, в якийсь момент часу, перебувати лише в одному з них.
+	
+<p align="center">
+  <img src="https://github.com/SKindij/SKindij/blob/main/recources/state-locked.png" 
+    title="state-machine" alt="state machine" width="500" height="270"/>  
+</p> 	
+	
+	
+	
+	
+	
