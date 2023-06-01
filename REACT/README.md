@@ -420,14 +420,113 @@ _Якщо в двох словах, то даний інструмент доз�
 		
 &emsp;**Машини станів** – це добрі засоби захисту від подібних проблем. Вони захищають нас від досягнення невідомих станів, оскільки ми встановлюємо межі для того, що і коли може статися, не вказуючи явно як це може статися. Концепція машини станів добре поєднується з односпрямованим потоком даних. Разом вони зменшують складність коду та дають чіткі відповіді на питання про те, як система потрапила в той чи інший стан.	
 
+> _Використання React спільно з кінцевими автоматами - чудовий спосіб для підвищення вашої продуктивності як розробника, який також покращує хиткі взаємини розробників/дизайнерів._	
 	
-	
-	
-	
-	
-	
-	
-	
+```javascript
+import React, {Component, PropTypes} from 'react';
+export default class InputStateMachine extends Component {
+   constructor(props) {
+     super(props);
+     this.handleSubmit = this.handleSubmit.bind(this);
+     this.goToState = this.goToState.bind(this);
+     this.save = this.save.bind(this);
+     this.state = {
+       name: 'display',
+       machine: this.generateState('display', props.initialValue),
+     };
+   }
+  generateState(stateName, stateParam) {
+    const previousState = this.state ? {...this.state.machine} : {};
+    switch (stateName) {
+      case 'display':
+        return {
+          processing: false,
+          error: null,
+          value: stateParam || previousState.value,
+          editing: false,
+          editValue: null,
+        };
+      case 'saving':
+        return {
+          processing: true,
+          error: null, // скидання попередньої помилки збереження
+          value: previousState.value,
+          editing: true, // відображення вікна редагування в процесі збереження
+          editValue: previousState.editValue,
+        };
+      case 'edit':
+        return {
+          processing: false,
+          error: null,
+          value: previousState.value,
+          editing: true,
+          editValue: stateParam,
+        };
+      case 'save_error':
+        return {
+          processing: false,
+          error: stateParam,
+          value: previousState.value,
+          editing: true, // залишаємо вікно редагування відкритим
+          editValue: previousState.editValue,
+        };
+      case 'loading': // ідентично стану за умовчанням
+      default:
+        return {
+          processing: true,
+          error: null,
+          value: null,
+          editing: false,
+          editValue: null,
+        };
+    }
+  }
+  goToState(stateName, stateParam) {
+    this.setState({
+      name: stateName,
+      machine: this.generateState(stateName, stateParam),
+    });
+  }
+  handleSubmit(e) {
+    this.goToState('edit', e.target.value);
+  }
+  save(valueToSave) {
+    this.goToState('saving');
+    // імітуємо збереження даних...
+    setTimeout(() => this.goToState('display', valueToSave), 2000);
+  }
+  render() {
+    const {processing, error, value, editing, editValue} = this.state.machine;
+    if (processing) {
+      return <p>Processing ...</p>;
+    } else if (editing) {
+      return (
+        <div>
+          <input
+            type="text"
+            onChange={this.handleSubmit}
+            value={editValue || value}
+          />
+          {error && <p>Error: {error}</p>}
+          <button onClick={() => this.save(editValue)}>Save</button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <p>{value}</p>
+          <button onClick={() => this.goToState('edit', value)}>Edit</button>
+        </div>
+      );
+    }
+  }
+}
+```	
+
+> _Використання такого компонента:_
+```javascript	
+<InputStateMachine initialValue="state machine" />	
+```	
 	
 	
 	
