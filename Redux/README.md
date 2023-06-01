@@ -10,4 +10,14 @@
 + **гнучкий**
   * _працює з будь-яким рівнем інтерфейсу користувача та має велику екосистему додатків_
 
+<p align="center">
+  <img src="https://github.com/SKindij/SKindij/blob/main/recources/reducer-scheme.png" 
+    title="reducer-scheme" alt="reducer scheme" width="600" height="400"/>  
+</p> 
+
+
+
+
+
+
 
