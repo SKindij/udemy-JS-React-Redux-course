@@ -527,6 +527,27 @@ export default class InputStateMachine extends Component {
 ```javascript	
 <InputStateMachine initialValue="state machine" />	
 ```	
+
+### Final State Machine	
+	
+Описується модель "кінцевого автомата станів" за допомогою п'яти параметрів:	
+* всі стани, в яких може перебувати автомат;
+* набір всіх вхідних даних, що приймаються автоматом;
+* функція переходів - приймає попередній стан та набір вхідних даних, і повертає новий стан;
+* початковий стан;
+* кінцевий стан;	
+	
+_У кожний момент часу активним може бути лише один стан._
+	
+	
+[XState](https://xstate.js.org/docs/recipes/react.html) can be used with React to:
+- Coordinate local state
+- Manage global state performantly
+- Consume data from other hooks	
+	
+With [Robot](https://thisrobot.life/) you can build finite state machines in a simple and flexible way.	
+	
+[Machina.js](http://machina-js.org/) is a JavaScript framework for highly customizable finite state machines (FSMs). Many of the ideas for machina have been loosely inspired by the Erlang/OTP FSM behaviors.	
 	
 	
 	
