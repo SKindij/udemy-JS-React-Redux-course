@@ -3,7 +3,7 @@ import { useHttp } from "../hooks/http.hook";
 
 const useMarvelService = () => {
   // користуємося деструктуризацією
-  const { loading, request, error, clearError } = useHttp();
+  const { loading, request, error, clearError, process } = useHttp();
 
   const _apiBase = 'https://gateway.marvel.com:443/v1/public/';
   // public key
@@ -67,14 +67,15 @@ const useMarvelService = () => {
 	};
 
   return {
-		loading,
-		error,
-		clearError,
-		getAllCharacters,
-		getCharacter,
-    getAllComics,
-		getComics,
-	};
+	loading,
+	error,
+	clearError,
+	process,
+	getAllCharacters,
+	getCharacter,
+        getAllComics,
+	getComics,
+   };
 };
 
 export default useMarvelService;
