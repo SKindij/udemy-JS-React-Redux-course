@@ -20,6 +20,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 + build: ``npm i uuid``
   - web: https://www.npmjs.com/package/uuid
   - For the creation of RFC4122 UUIDs
++ build: ``npm install -g json-server``
+  - Install JSON Server
+  - web: https://www.npmjs.com/package/json-server
+  - POST, PUT or PATCH request should include Content-Type: application/json header
 
 ```javascript
 "scripts": {
