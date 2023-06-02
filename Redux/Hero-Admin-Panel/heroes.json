@@ -1,29 +1,59 @@
 {
-    "heroes": [
-        {
-            "id": 1,
-            "name": "Перший герой",
-            "description": "Лідер у рейтингу!",
-            "element": "fire"
-        },
-        {
-            "id": 2,
-            "name": "Невідомий герой",
-            "description": "Той, що ховається в тіні",
-            "element": "wind"
-        },
-        {
-            "id": 3,
-            "name": "Морський герой",
-            "description": "Як аквамен, але не з DC",
-            "element": "water"
-        }
-    ],
-    "filters": [
+  "heroes": [
+    {
+      "id": 101,
+      "name": "Сварог",
+      "description": "Верховний Бог неба і вогню.",
+      "element": "fire"
+    },
+    {
+      "id": 102,
+      "name": "Стрибог",
+      "description": "Бог вітрів.",
+      "element": "wind"
+    },
+    {
+      "id": 103,
+      "name": "Велес",
+      "description": "Бог господарства, торгівлі, музики, поезії.",
+      "element": "earth"
+    },
+    {
+      "id": 104,
+      "name": "Дадбог",
+      "description": "Солярне божество.",
+      "element": "fire"
+    },
+    {
+        "id": 105,
+        "name": "Мольфар",
+        "description": "Чаклун, який може підкоряти духів.",
+        "element": "wind"
+    },
+    {
+        "id": 106,
+        "name": "Хмарник",
+        "description": "Захищає село від негоди.",
+        "element": "wind"
+    },
+    {
+        "id": 107,
+        "name": "Водяник",
+        "description": "Як аквамен, але не з DC.",
+        "element": "water"
+    },    
+    {
+      "id": 108,
+      "name": "Шалена капібара",
+      "description": "Найдобріший супергерой на Землі",
+      "element": "earth"
+    }
+  ],
+  "filters": [
         "all",
         "fire",
         "water",
         "wind",
         "earth"
-    ]
+  ]
 }
