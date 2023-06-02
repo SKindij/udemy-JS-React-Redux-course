@@ -1,14 +1,15 @@
 # Hero Admin Panel
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 + init: ``npx create-react-app hero-admin-panel``
 + go: ``cd hero-admin-panel``
 
+### Getting Started
 + build: ``npm i bootstrap``
 + build: ``npm i sass``
 > CDN links 
 > * ``https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css``
 > * ``https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js``
-
 + build: ``npm i redux react-redux``
 + build: ``npm i classnames``
   - web: https://www.npmjs.com/package/classnames
@@ -29,5 +30,12 @@
   },
 ```
 
+### Available Scripts
 
-
++ run: ``npm start``
+  - Runs the app in the development mode.
+  - Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - The page will reload when you make changes.
++ run: ``npm run build``
+  - Builds the app for production to the `build` folder.
+  - The build is minified and the filenames include the hashes.
