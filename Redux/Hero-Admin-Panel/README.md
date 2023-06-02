@@ -4,6 +4,7 @@
 + go: ``cd hero-admin-panel``
 
 + build: ``npm i bootstrap``
++ build: ``npm i sass``
 > CDN links 
 > * ``https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css``
 > * ``https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js``
@@ -19,8 +20,14 @@
   - web: https://www.npmjs.com/package/uuid
   - For the creation of RFC4122 UUIDs
 
-
-
+```javascript
+"scripts": {
+    "start": "concurrently \"react-scripts start\" \"npx json-server heroes.json --port 3001\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
 
 
 
