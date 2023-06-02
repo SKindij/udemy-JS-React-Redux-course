@@ -20,7 +20,7 @@
     },
     {
       "id": 104,
-      "name": "Дадбог",
+      "name": "Дажбог",
       "description": "Солярне божество.",
       "element": "fire"
     },
@@ -50,10 +50,30 @@
     }
   ],
   "filters": [
-        "all",
-        "fire",
-        "water",
-        "wind",
-        "earth"
+    {
+      "name": "all",
+      "label": "Усі",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Вогонь",
+      "className": "btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Вода",
+      "className": "btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Вітер",
+      "className": "btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Земля",
+      "className": "btn-secondary"
+    }
   ]
 }
