@@ -23,7 +23,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 + build: ``npm install reselect``
   - web: https://github.com/reduxjs/reselect
   - A library for creating memoized "selector" functions. 
-
++ build: `npm install redux-thunk```
+  - web: https://github.com/reduxjs/redux-thunk
+  -  It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
 + build: ``npm install -g json-server``
   - Install JSON Server
   - web: https://www.npmjs.com/package/json-server
