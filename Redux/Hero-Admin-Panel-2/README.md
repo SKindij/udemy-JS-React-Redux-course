@@ -23,9 +23,6 @@
 + build: ``npm install reselect``
   - web: https://github.com/reduxjs/reselect
   - A library for creating memoized "selector" functions. 
-+ build: `npm install redux-thunk```
-  - web: https://github.com/reduxjs/redux-thunk
-  -  It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
 
 ```javascript
 "scripts": {
@@ -35,6 +32,15 @@
     "eject": "react-scripts eject"
   },
 ```
+
+store: 
+* ``import { configureStore } from '@reduxjs/toolkit';``
+  + reducer
+  + middleware (actionCreatorInvariant, immutableStateInvariant, thunk, serializableStateInvariant)
+  + devTools
+
+
+
 
 - - -
 
