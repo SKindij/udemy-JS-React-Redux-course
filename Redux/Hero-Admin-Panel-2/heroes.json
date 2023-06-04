@@ -1,0 +1,79 @@
+{
+  "heroes": [
+    {
+      "id": 101,
+      "name": "Сварог",
+      "description": "Верховний Бог неба і вогню.",
+      "element": "fire"
+    },
+    {
+      "id": 102,
+      "name": "Стрибог",
+      "description": "Бог вітрів.",
+      "element": "wind"
+    },
+    {
+      "id": 103,
+      "name": "Велес",
+      "description": "Бог господарства, торгівлі, музики, поезії.",
+      "element": "earth"
+    },
+    {
+      "id": 104,
+      "name": "Дажбог",
+      "description": "Солярне божество.",
+      "element": "fire"
+    },
+    {
+      "id": 105,
+      "name": "Мольфар",
+      "description": "Чаклун, який може підкоряти духів.",
+      "element": "wind"
+    },
+    {
+      "id": 106,
+      "name": "Хмарник",
+      "description": "Захищає село від негоди.",
+      "element": "wind"
+    },
+    {
+      "id": 107,
+      "name": "Водяник",
+      "description": "Як аквамен, але не з DC.",
+      "element": "water"
+    },
+    {
+      "id": 108,
+      "name": "Шалена капібара",
+      "description": "Найдобріший супергерой на Землі",
+      "element": "earth"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "label": "Усі",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "fire",
+      "label": "Вогонь",
+      "className": "btn-danger"
+    },
+    {
+      "name": "water",
+      "label": "Вода",
+      "className": "btn-primary"
+    },
+    {
+      "name": "wind",
+      "label": "Вітер",
+      "className": "btn-success"
+    },
+    {
+      "name": "earth",
+      "label": "Земля",
+      "className": "btn-secondary"
+    }
+  ]
+}
