@@ -43,8 +43,8 @@ const store = createStore( reducer, /* preloadedState, */
   - обгортає createStore, щоб забезпечити спрощені параметри конфігурації та хороші параметри за замовчуванням;
   - він може автоматично поєднувати ваші редуктори фрагментів, додавати будь-яке проміжне програмне забезпечення Redux, яке ви надаєте, включає redux-thunk за замовчуванням і дозволяє використовувати розширення Redux DevTools;
 * **createReducer():**
-  - що дозволяє надавати таблицю пошуку типів дій для функцій зменшення регістру, а не писати оператори switch;
-  - крім того, він автоматично використовує бібліотеку immer, щоб дозволити вам писати простіші незмінні оновлення зі звичайним мутативним кодом, наприклад state.todos[3].completed = true;
+  - дозволяє надавати таблицю пошуку типів дій для функцій зменшення регістру, а не писати оператори switch;
+  - автоматично використовує бібліотеку immer, щоб дозволити вам писати простіші незмінні оновлення зі звичайним мутативним кодом, наприклад state.todos[3].completed = true;
 * **createAction():**
   - генерує функцію створення дії для заданого рядка типу дії.;
   - функція toString() визначена так, що її можна використовувати замість константи типу;
@@ -54,13 +54,13 @@ const store = createStore( reducer, /* preloadedState, */
   - приймає рядок типу дії та функцію, яка повертає обіцянку, і генерує перехідник, який відправляє типи дій, що очікують/виконані/відхилені на основі цієї обіцянки;
 * **createEntityAdapter:**
   - генерує набір багаторазових редукторів і селекторів для керування нормалізованими даними в сховищі;
-* Утиліта **createSelector** з бібліотеки Reselect, повторно експортована для зручності використання.
+* утиліта **createSelector** з бібліотеки Reselect, повторно експортована для зручності використання.
 
 - - -
 
 ### Create a React Redux App
 
-The recommended way to start new apps with React and Redux is by using our official Redux+TS template for Vite, or by creating a new Next.js project using Next's with-redux template.
+The recommended way to start new apps with React and Redux is by using our official Redux+TS template for Vite, or by creating a new Next.js project using Next's with-redux template. https://github.com/reduxjs/redux-templates/tree/master/packages
 
 Both of these already have Redux Toolkit and React-Redux configured appropriately for that build tool, and come with a small example app that demonstrates how to use several of Redux Toolkit's features.
 
