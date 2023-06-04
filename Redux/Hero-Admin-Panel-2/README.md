@@ -10,6 +10,7 @@
 
 + build: ``npm i bootstrap``
 + build: ``npm i sass``
++ build: ``npm i react-transition-group``
 + build: ``npm i classnames``
   - web: https://www.npmjs.com/package/classnames
   - A simple JavaScript utility for conditionally joining classNames together.
