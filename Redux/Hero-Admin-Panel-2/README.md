@@ -33,14 +33,24 @@
   },
 ```
 
-store: 
+- - -
+
+### reduxjs/toolkit
+web: https://redux-toolkit.js.org/introduction/getting-started#whats-included
 * ``import { configureStore } from '@reduxjs/toolkit';``
   + reducer
-  + middleware (actionCreatorInvariant, immutableStateInvariant, thunk, serializableStateInvariant)
+  + middleware (_actionCreatorInvariant, immutableStateInvariant, thunk, serializableStateInvariant_)
   + devTools
-
-
-
+* ``import { createAction, createReducer } from '@reduxjs/toolkit'``
+  + builder.addCase
+  + builder.addMatcher
+  + builder.addDefaultCase
+* ``import { createAction } from '@reduxjs/toolkit'``
+  + actionCreator.match
+* import { createSlice } from '@reduxjs/toolkit'
+  + initialState
+  + reducers
+  + extraReducers
 
 - - -
 
