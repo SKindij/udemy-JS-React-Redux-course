@@ -56,3 +56,15 @@ const store = createStore( reducer, /* preloadedState, */
   - генерує набір багаторазових редукторів і селекторів для керування нормалізованими даними в сховищі;
 * Утиліта **createSelector** з бібліотеки Reselect, повторно експортована для зручності використання.
 
+- - -
+
+### Create a React Redux App
+
+The recommended way to start new apps with React and Redux is by using our official Redux+TS template for Vite, or by creating a new Next.js project using Next's with-redux template.
+
+Both of these already have Redux Toolkit and React-Redux configured appropriately for that build tool, and come with a small example app that demonstrates how to use several of Redux Toolkit's features.
+
++ ``vite-template-redux``: Vite, with TypeScript
++ ``cra-template-redux-typescript``: Create-React-App, with TypeScript
++ ``cra-template-redux``: Create-React-App, with JavaScript
+
