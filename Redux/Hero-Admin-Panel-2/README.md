@@ -36,6 +36,31 @@
   },
 ```
 
+- - -
+
+```javascript
+"dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "bootstrap": "^5.3.0",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.7",
+    "react-scripts": "^5.0.1",
+    "react-transition-group": "^4.4.5",
+    "redux-thunk": "^2.4.2",
+    "reselect": "^4.1.8",
+    "sass": "^1.62.1",
+    "uuid": "^9.0.0",
+    "web-vitals": "^2.1.4"
+  },
+```
+
+- - -
+
 ### Available Scripts
 
 + run: ``npm start``
