@@ -342,6 +342,11 @@ https://uk.legacy.reactjs.org/docs/optimizing-performance.html
 ## Deployment
 `npm run build` creates a build directory with a production build of your app. 
 
+Delete the ESLint cache to ensure that any cached configurations are cleared.\
+You can do this by running the following command in your project's root directory:\
+``rm -rf node_modules/.cache/eslint-loader``
+
+
 If you’re using **Apache HTTP Server**, you need to create a .htaccess file in the public folder that looks like this:
 ```  
     Options -MultiViews
